@@ -13,6 +13,7 @@
 
         .navbar {
             transition: all 0.5s ease-in-out;
+            -webkit-backdrop-filter: blur(20px) opacity(1);
             backdrop-filter: blur(20px) opacity(1);
         }
 
@@ -62,19 +63,20 @@
             filter: brightness(110%) saturate(110%);
         }
 
-        .navbarClass{
+        .navbarClass {
             transition: 1s cubic-bezier(0.075, 0.82, 0.165, 1);
-            background: rgba(0,0,0,0.3);
+            background: rgba(0, 0, 0, 0.3);
         }
 
-        .shrink{
+        .shrink {
             padding: 10px 0 !important;
         }
 
 
     </style>
     <!-- End Custom Style -->
-    <div id="myNavbar" class="transition pt-10 navbarClass navbar w-full p-3 z-40 fixed text-white bg-transparent dark-mode:text-gray-200 dark-mode:bg-gray-800">
+    <div id="myNavbar"
+         class="transition pt-10 navbarClass navbar w-full p-3 z-40 fixed text-white bg-transparent dark-mode:text-gray-200 dark-mode:bg-gray-800">
         <div x-data="{ open: false }"
              class="flex flex-col max-w-screen-xl px-4 mx-auto md:items-center md:justify-between md:flex-row md:px-6 lg:px-8">
             <div class="p-4 flex flex-row items-center justify-between">
@@ -154,14 +156,16 @@
             <div class="grid grid-cols-1 md:grid-cols-11 sm:gap-8 md:gap-8 lg:gap-10 xl:gap-28 items-center">
                 <!-- hero text -->
                 <div class="transition col-start-2 col-span-10 rounded-2xl px-10 py-40" style="background: #FFF4E5">
-                        <p class="text-base font-thin text-black sm:text-lg mx-auto">
-                            Acho que vais gostar de-me conhecer. Não tens muito a perder, desce e vê por ti mesmo! Sou dinâmico e interessante, mas isso todos dizem. Sabes o que sou mesmo? Louco. Louco por fazer o que gosto e por mostrar o quanto eu gosto! 😎
-                        </p>
-                    </div>
-
+                    <p class="text-base font-thin text-black sm:text-lg mx-auto">
+                        Acho que vais gostar de-me conhecer. Não tens muito a perder, desce e vê por ti mesmo! Sou
+                        dinâmico e interessante, mas isso todos dizem. Sabes o que sou mesmo? Louco. Louco por fazer o
+                        que gosto e por mostrar o quanto eu gosto! 😎
+                    </p>
                 </div>
+
             </div>
         </div>
+    </div>
     </div>
 
     <div class="relative bg-white overflow-hidden p-10 pt-10 md:pt-10 lg:pt-20 lg:pb-20 md:pb-14">
@@ -170,14 +174,16 @@
             <div class="grid grid-cols-1 md:grid-cols-11 sm:gap-8 md:gap-8 lg:gap-10 xl:gap-28 items-center">
                 <!-- hero text -->
                 <div class="col-start-2 col-span-10 rounded-2xl px-10 py-40" style="background: #F0F4FF">
-                        <p class="text-base font-thin text-black sm:text-lg mx-auto">
-                            Acho que vais gostar de-me conhecer. Não tens muito a perder, desce e vê por ti mesmo! Sou dinâmico e interessante, mas isso todos dizem. Sabes o que sou mesmo? Louco. Louco por fazer o que gosto e por mostrar o quanto eu gosto! 😎
-                        </p>
-                    </div>
-
+                    <p class="text-base font-thin text-black sm:text-lg mx-auto">
+                        Acho que vais gostar de-me conhecer. Não tens muito a perder, desce e vê por ti mesmo! Sou
+                        dinâmico e interessante, mas isso todos dizem. Sabes o que sou mesmo? Louco. Louco por fazer o
+                        que gosto e por mostrar o quanto eu gosto! 😎
+                    </p>
                 </div>
+
             </div>
         </div>
+    </div>
     </div>
 
     <div class="relative bg-white overflow-hidden p-10 pt-10 md:pt-10 lg:pt-20 lg:pb-20 md:pb-14">
@@ -186,18 +192,20 @@
             <div class="grid grid-cols-1 md:grid-cols-11 sm:gap-8 md:gap-8 lg:gap-10 xl:gap-28 items-center">
                 <!-- hero text -->
                 <div class="col-start-2 col-span-10 rounded-2xl px-10 py-40" style="background: #FBFFEB">
-                        <p class="text-base font-thin text-black sm:text-lg mx-auto">
-                            Acho que vais gostar de-me conhecer. Não tens muito a perder, desce e vê por ti mesmo! Sou dinâmico e interessante, mas isso todos dizem. Sabes o que sou mesmo? Louco. Louco por fazer o que gosto e por mostrar o quanto eu gosto! 😎
-                        </p>
-                    </div>
-
+                    <p class="text-base font-thin text-black sm:text-lg mx-auto">
+                        Acho que vais gostar de-me conhecer. Não tens muito a perder, desce e vê por ti mesmo! Sou
+                        dinâmico e interessante, mas isso todos dizem. Sabes o que sou mesmo? Louco. Louco por fazer o
+                        que gosto e por mostrar o quanto eu gosto! 😎
+                    </p>
                 </div>
+
             </div>
         </div>
     </div>
+    </div>
 
 
-<script>
+    <script>
         $(window).scroll(function () {
             if ($(document).scrollTop() > 100) {
                 $('#myNavbar').addClass('shrink');
