@@ -120,6 +120,13 @@
 
         /* GLOBAL STYLES */
 
+        .ios_right_padding{
+            padding-right: env(safe-area-inset-right);
+        }
+
+        .ios_left_padding{
+            padding-left: env(safe-area-inset-left);
+        }
 
     </style>
     <!-- End Custom Style -->
@@ -128,7 +135,7 @@
     <nav id="myNavbar"
          class="md:px-6 lg:px-8 transition pt-10 z-40 p-3 fixed navbarClass navbar flex items-center  flex-wrap w-full  text-white">
 
-        <div class="p-4 flex flex-row items-center justify-between">
+        <div class="p-4 flex flex-row items-center justify-between ios_left_padding">
             <a href="#"
                class="contactButton text-sm font-bold font-mono tracking-widest rounded-md">Miguel Ferreira</a>
         </div>
@@ -148,7 +155,7 @@
 
         </button>
 
-        <div class="hidden top-navbar w-full md:inline-flex md:flex-grow md:w-auto"
+        <div class="hidden top-navbar w-full md:inline-flex md:flex-grow md:w-auto ios_right_padding"
              id="navigation">
 
             <div class="gap-y-5 p-10 md:p-0 md:inline-flex md:flex-row md:ml-auto flex flex-col pb-4 md:pb-0">
