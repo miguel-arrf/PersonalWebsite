@@ -120,16 +120,32 @@
 
         /* GLOBAL STYLES */
 
-        .ios_right_padding{
+        /*.ios_right_padding {
             padding-right: env(safe-area-inset-right);
+            padding-right: 50px;
         }
 
-        .ios_left_padding{
+        .ios_left_padding {
             padding-left: env(safe-area-inset-left);
+            padding-left: 50px;
+        }*/
+
+        .dud {
+            color: #757575
         }
+
+
+
+
+.ml4 .letters {
+  position: absolute;
+  opacity: 1;
+}
+
 
     </style>
     <!-- End Custom Style -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
 
     <!-- Navbar -->
     <nav id="myNavbar"
@@ -140,7 +156,8 @@
                class="contactButton text-sm font-bold font-mono tracking-widest rounded-md">Miguel Ferreira</a>
         </div>
 
-        <button  id="pipi" class="transition text-white inline-flex p-3  rounded md:hidden ml-auto nav-toggler outline-none focus:outline-none"
+        <button id="pipi"
+                class="transition text-white inline-flex p-3  rounded md:hidden ml-auto nav-toggler outline-none focus:outline-none"
                 data-target="#navigation">
 
             <div class="hamburger">
@@ -187,7 +204,23 @@
                 <div class="col-start-2 col-span-4">
                     <div class="lg:text-left">
                         <h1 class="text-3xl tracking-wide font-bold text-gray-900 sm:text-3xl lg:text-3xl xl:text-4xl">
-                            <span class="block text-white">Olá, sou o Miguel!</span>
+                            <span class="block text-white">Olá, sou {# o Miguel !#}
+
+
+<h1 class="ml4 pb-10 pt-5">
+  <span class="letters letters-1">o Miguel Ferreira!</span>
+  <span class="letters letters-2">Paixão</span>
+  <span class="letters letters-3">Ética</span>
+    <span class="letters letters-4">Resiliência</span>
+  <span class="letters letters-5">Liderança</span>
+
+</h1>
+
+
+
+                                   {#   <div class="text"></div> #}
+
+                            </span>
                         </h1>
                         <p class="mt-3 text-base font-thin text-white sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-base lg:mx-0">
                             Acho que vais gostar de-me conhecer. Não tens muito a perder, desce e vê por ti mesmo! Sou
@@ -202,7 +235,7 @@
                                     Conhece-me melhor
                                     <i class="pl-4 fas fa-chevron-down"></i>
                                 </a>
-                                
+
                             </div>
                         </div>
                     </div>
@@ -224,14 +257,19 @@
     <!-- https://drive.google.com/uc?export=view&id=1RHdbxbcwksjSS26VsEuZZi_K37252oSG -->
     <!-- end image -->
 
+
+
+
     <div class="relative bg-white overflow-hidden md:p-10 md:pt-10 md:pt-10 lg:pt-20 lg:pb-20 md:pb-14 sm:p-0">
         <div class="lg:container  lg:mx-auto">
             <!-- hero wrapper -->
             <div class="grid grid-cols-1 md:grid-cols-12 md:gap-8 lg:gap-10 xl:gap-28 items-center  ">
                 <!-- hero text -->
-                <div class="transition col-start-2 col-span-10 md:rounded-2xl px-10 py-20  sm:rounded-none" style="background: #FFF4E5">
+                <div class="transition col-start-2 col-span-10 md:rounded-2xl px-10 py-20  sm:rounded-none"
+                     style="background: #FFF4E5">
                     <p class="text-base font-light text-black sm:text-lg mx-auto">
-                        Sou estudante de Engenharia Informática, estou no 3º ano e prestes a atirar-me para novos desafios.
+                        Sou estudante de Engenharia Informática, estou no 3º ano e prestes a atirar-me para novos
+                        desafios.
                         <span class="font-bold">
                             Paixão, resiliência, ética e liderança
                         </span>
@@ -246,12 +284,13 @@
 
 
 
-    <div class="relative bg-white overflow-hidden p-10 pt-10 md:pt-10 lg:pt-20 lg:pb-20 md:pb-14">
-        <div class="container mx-auto">
+    <div class="relative bg-white overflow-hidden md:p-10 md:pt-10 md:pt-10 lg:pt-20 lg:pb-20 md:pb-14 sm:p-0">
+        <div class="lg:container  lg:mx-auto">
             <!-- hero wrapper -->
-            <div class="grid grid-cols-1 md:grid-cols-12  md:gap-8 lg:gap-10 xl:gap-28 items-center">
+            <div class="grid grid-cols-1 md:grid-cols-12 md:gap-8 lg:gap-10 xl:gap-28 items-center  ">
                 <!-- hero text -->
-                <div class="col-start-2 col-span-10 rounded-2xl px-10 py-20" style="background: #F0F4FF">
+                <div class="transition col-start-2 col-span-10 md:rounded-2xl px-10 py-20  sm:rounded-none"
+                     style="background: #F0F4FF">
                     <p class="text-base font-bold text-indigo-900 sm:text-lg mx-auto">
                         Ensino
                     </p>
@@ -261,9 +300,11 @@
                     </p>
 
                     <ul class="pl-10 pt-2 list-disc text-base font-light text-black sm:text-lg mx-auto">
-                      <li>Média de 17.94 valores.</li>
+                        <li>Média de 17.94 valores.</li>
                         <li>Excelência (20 valores) em Inteligência Artifical e Programação em Rede.</li>
-                        <li>Especialização em Apresentações Profissionais, Data Mining and Extraction e Matemática Aplicada à Computação.</li>
+                        <li>Especialização em Apresentações Profissionais, Data Mining and Extraction e Matemática
+                            Aplicada à Computação.
+                        </li>
                         <li>Delegado de curso na totalidade da licenciatura.</li>
                     </ul>
 
@@ -274,12 +315,14 @@
     </div>
 
 
-    <div class="relative bg-white overflow-hidden p-10 pt-10 md:pt-10 lg:pt-20 lg:pb-20 md:pb-14">
-        <div class="container  mx-auto">
+    <div class="relative bg-white overflow-hidden md:p-10 md:pt-10 md:pt-10 lg:pt-20 lg:pb-20 md:pb-14 sm:p-0">
+        <div class="lg:container  lg:mx-auto">
             <!-- hero wrapper -->
-            <div class="grid grid-cols-1 md:grid-cols-12  md:gap-8 lg:gap-10 xl:gap-28 items-center">
+            <div class="grid grid-cols-1 md:grid-cols-12 md:gap-8 lg:gap-10 xl:gap-28 items-center  ">
                 <!-- hero text -->
-                <div class="col-start-2 col-span-10 rounded-2xl px-10 py-20" style="background: #FBFFEB">
+
+                <div class="transition  col-span-10 md:rounded-2xl px-10 py-20  sm:rounded-none sm:col-start-1 md:col-start-2"
+                     style="background: #FBFFEB">
                     <p class="text-base font-bold text-green-900 sm:text-lg mx-auto">
                         Projetos e Experiência Adicional
                     </p>
@@ -287,31 +330,35 @@
                         Ensino Secundário
                     </p>
 
+
                     <ul class="pl-10 pt-2 list-disc text-base font-light text-black sm:text-lg mx-auto">
-                      <li>Responsável pelo programa Parlamento dos Jovens durante 2 anos.</li>
+                        <li>Responsável pelo programa Parlamento dos Jovens durante 2 anos.</li>
                         <li>Membro eleito para a Comissão Executiva da Associação de Estudantes.</li>
                         <li>Organização de debates e palestras para alunos e docentes.</li>
                     </ul>
 
+
                 </div>
+
 
             </div>
         </div>
     </div>
 
 
-    <div class="relative bg-white overflow-hidden p-10 pt-10 md:pt-10 lg:pt-20 lg:pb-20 md:pb-14">
-        <div class="container mx-auto">
+    <div class="relative bg-white overflow-hidden md:p-10 md:pt-10 md:pt-10 lg:pt-20 lg:pb-20 md:pb-14 sm:p-0">
+        <div class="lg:container  lg:mx-auto">
             <!-- hero wrapper -->
-            <div class="grid grid-cols-1 md:grid-cols-12 md:gap-8 lg:gap-10 xl:gap-28 items-center">
+            <div class="grid grid-cols-1 md:grid-cols-12 md:gap-8 lg:gap-10 xl:gap-28 items-center  ">
                 <!-- hero text -->
-                <div class="col-start-2 col-span-10 rounded-2xl px-10 py-20" style="background: #fff2f2">
+                <div class="transition col-start-2 col-span-10 md:rounded-2xl px-10 py-20  sm:rounded-none"
+                     style="background: #fff2f2">
                     <p class="text-base font-bold text-pink-900 sm:text-lg mx-auto">
                         Soft & Hard Skills
                     </p>
 
                     <ul class="pl-10 pt-2 list-disc text-base font-light text-black sm:text-lg mx-auto">
-                      <li>MySQL, Java, C, Python, Prolog e Scala.</li>
+                        <li>MySQL, Java, C, Python, Prolog e Scala.</li>
                         <li>Excepcionalmente capaz em todos os aspetos de Java.</li>
                         <li>Forte capacidade em liderança, comunicação e colaboração.</li>
                         <li>Invulgar capacidade para aliar Design e Programação</li>
@@ -325,55 +372,55 @@
     </div>
 
 
-<!-- START MINI MEETINGS -->
+    <!-- START MINI MEETINGS -->
     <div class="relative bg-white overflow-hidden p-10 pt-10 md:pt-10 lg:pt-20 lg:pb-20 md:pb-14">
-   <div class="container  mx-auto">
-      <!-- hero wrapper -->
-      <div class="grid grid-cols-1 md:grid-cols-12  md:gap-8 lg:gap-10 xl:gap-28 items-center">
-         <!-- hero text -->
-         <div class="col-start-2 col-span-10 rounded-2xl px-5 py-5 bg-blue-50">
+        <div class="container  mx-auto">
+            <!-- hero wrapper -->
+            <div class="grid grid-cols-1 md:grid-cols-12  md:gap-8 lg:gap-10 xl:gap-28 items-center">
+                <!-- hero text -->
+                <div class="col-start-2 col-span-10 rounded-2xl px-5 py-5 bg-blue-50">
 
-            <div class="grid  grid-cols-5 rounded-2xl   md:gap-8 lg:gap-10 items-center bg-blue-50" >
+                    <div class="grid  grid-cols-5 rounded-2xl   md:gap-8 lg:gap-10 items-center bg-blue-50">
 
-               <div class="col-span-2 rounded-2xl pl-10 py-20">
-                  <p class="text-base font-bold text-blue-900 sm:text-lg mx-auto">
-                     miniMeetings
-                  </p>
-                  <p class="text-base font-light text-black sm:text-lg mx-auto">
-                     Applicação para iOS e iPadOS para organizar reuniões online.
-                  </p>
+                        <div class="col-span-2 rounded-2xl pl-10 py-20">
+                            <p class="text-base font-bold text-blue-900 sm:text-lg mx-auto">
+                                miniMeetings
+                            </p>
+                            <p class="text-base font-light text-black sm:text-lg mx-auto">
+                                Applicação para iOS e iPadOS para organizar reuniões online.
+                            </p>
 
-                  <div class="flex flex-row items-start gap-3 pt-5 flex-wrap">
-                    <p class=" text-base font-light  text-black sm:text-lg  bg-blue-100 rounded-lg px-2.5">
-                      xCode
-                    </p>
+                            <div class="flex flex-row items-start gap-3 pt-5 flex-wrap">
+                                <p class=" text-base font-light  text-black sm:text-lg  bg-blue-100 rounded-lg px-2.5">
+                                    xCode
+                                </p>
 
-                    <p class=" text-base font-light  text-black sm:text-lg  bg-blue-100 rounded-lg px-2.5">
-                      Swift
-                    </p>
+                                <p class=" text-base font-light  text-black sm:text-lg  bg-blue-100 rounded-lg px-2.5">
+                                    Swift
+                                </p>
 
-                    <p class="text-base font-light  text-black sm:text-lg  bg-blue-100 rounded-lg px-2.5">
-                      Firebase
-                    </p>
-                  </div>
+                                <p class="text-base font-light  text-black sm:text-lg  bg-blue-100 rounded-lg px-2.5">
+                                    Firebase
+                                </p>
+                            </div>
 
 
-               </div>
+                        </div>
 
-               <div class="row-start-1 col-start-3 col-span-3 rounded-2xl bg-white px-10 py-20 shadow-xl">
-                  5555555555
-               </div>
+                        <div class="row-start-1 col-start-3 col-span-3 rounded-2xl bg-white px-10 py-20 shadow-xl">
+                            5555555555
+                        </div>
 
+                    </div>
+
+                </div>
             </div>
-
-         </div>
-      </div>
-   </div>
-</div>
-<!-- END MINI MEETINGS -->
+        </div>
+    </div>
+    <!-- END MINI MEETINGS -->
 
 
-            <!-- VIDEO -->
+    <!-- VIDEO -->
     <section class="lg:py-12 lg:flex lg:justify-center">
         <div class="bg-blue-50 dark:bg-gray-800 lg:mx-8 lg:flex lg:max-w-5xl lg:shadow-lg lg:rounded-lg">
             <div class="lg:w-1/2 p-10 sm:p-10  md:p-4 lg:p-0">
@@ -381,7 +428,7 @@
                         src="https://www.youtube.com/embed/7rzzwawyz78" frameborder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                         allowfullscreen></iframe>
-                                {#                <div class="h-64 bg-cover lg:rounded-lg lg:h-full" style="background-image:url('https://images.unsplash.com/photo-1593642532400-2682810df593?ixlib=rb-1.2.1&ixid=MXwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=750&q=80')"></div>#}
+                {#                <div class="h-64 bg-cover lg:rounded-lg lg:h-full" style="background-image:url('https://images.unsplash.com/photo-1593642532400-2682810df593?ixlib=rb-1.2.1&ixid=MXwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=750&q=80')"></div>#}
             </div>
 
             <div class="py-12 px-6 max-w-xl lg:max-w-5xl lg:w-1/2">
@@ -406,13 +453,14 @@
 
 
 
-        
-<!-- Section 1 -->
-<section class="text-gray-700 bg-black body-font">
-    <div class="container flex flex-col items-center px-8 py-8 mx-auto max-w-7xl sm:flex-row">
-        <a href="#_" class="text-xl font-black leading-none text-yellow-200 select-none logo">MiguelFerreira<span class="text-yellow-800">.</span></a>
 
-        <span class="inline-flex justify-center mt-4 space-x-5 sm:ml-auto sm:mt-0 sm:justify-start">
+    <!-- Section 1 -->
+    <section class="text-gray-700 bg-black body-font">
+        <div class="container flex flex-col items-center px-8 py-8 mx-auto max-w-7xl sm:flex-row">
+            <a href="#_" class="text-xl font-black leading-none text-yellow-200 select-none logo">MiguelFerreira<span
+                    class="text-yellow-800">.</span></a>
+
+            <span class="inline-flex justify-center mt-4 space-x-5 sm:ml-auto sm:mt-0 sm:justify-start">
            
             <a href="http://linkedin.com/in/marrf" class="text-white hover:text-gray-500">
                 <span class="sr-only">GitHub</span>
@@ -427,11 +475,99 @@
             </a>
 
         </span>
-    </div>
-</section>
+        </div>
+    </section>
 
 
-    
+
+
+    <script>
+        // ——————————————————————————————————————————————————
+        // TextScramble
+        // ——————————————————————————————————————————————————
+
+        class TextScramble {
+            constructor(el) {
+                this.el = el
+                this.chars = '!<>-_\\/[]{}—=+*^?#________'
+                this.update = this.update.bind(this)
+            }
+
+            setText(newText) {
+                const oldText = this.el.innerText
+                const length = Math.max(oldText.length, newText.length)
+                const promise = new Promise((resolve) => this.resolve = resolve)
+                this.queue = []
+                for (let i = 0; i < length; i++) {
+                    const from = oldText[i] || ''
+                    const to = newText[i] || ''
+                    const start = Math.floor(Math.random() * 40)
+                    const end = start + Math.floor(Math.random() * 40)
+                    this.queue.push({from, to, start, end})
+                }
+                cancelAnimationFrame(this.frameRequest)
+                this.frame = 0
+                this.update()
+                return promise
+            }
+
+            update() {
+                let output = ''
+                let complete = 0
+                for (let i = 0, n = this.queue.length; i < n; i++) {
+                    let {from, to, start, end, char} = this.queue[i]
+                    if (this.frame >= end) {
+                        complete++
+                        output += to
+                    } else if (this.frame >= start) {
+                        if (!char || Math.random() < 0.28) {
+                            char = this.randomChar()
+                            this.queue[i].char = char
+                        }
+                        output += `<span class="dud">${char}</span>`
+                    } else {
+                        output += from
+                    }
+                }
+                this.el.innerHTML = output
+                if (complete === this.queue.length) {
+                    this.resolve()
+                } else {
+                    this.frameRequest = requestAnimationFrame(this.update)
+                    this.frame++
+                }
+            }
+
+            randomChar() {
+                return this.chars[Math.floor(Math.random() * this.chars.length)]
+            }
+        }
+
+        // ——————————————————————————————————————————————————
+        // Example
+        // ——————————————————————————————————————————————————
+
+        const phrases = [
+            'o Miguel Ferreira',
+            'Paixão',
+            'Ética',
+            'Resiliência',
+            'Liderança'
+        ]
+
+        const el = document.querySelector('.text')
+        const fx = new TextScramble(el)
+
+        let counter = 0
+        const next = () => {
+            fx.setText(phrases[counter]).then(() => {
+                setTimeout(next, 1500)
+            })
+            counter = (counter + 1) % phrases.length
+        }
+
+        next()
+    </script>
 
 
     <script>
@@ -462,6 +598,103 @@
                 $('#myNavbar').removeClass('shrink');
             }
         });
+    </script>
+
+    <script>
+
+
+
+var ml4 = {};
+ml4.opacityIn = [0,1];
+ml4.scaleIn = [0.2, 1];
+ml4.scaleOut = 3;
+ml4.durationIn = 800;
+ml4.durationOut = 600;
+ml4.delay = 500;
+
+anime.timeline({loop: true})
+  .add({
+    targets: '.ml4 .letters-1',
+    translateX: [40,0],
+    translateZ: 0,
+    opacity: [0,1],
+    easing: "easeOutExpo",
+    duration: 1200,
+    delay: (el, i) => 500 + 30 * i
+  }).add({
+    targets: '.ml4 .letters-1',
+    translateX: [0,-30],
+    opacity: [1,0],
+    easing: "easeInExpo",
+    duration: 1100,
+    delay: (el, i) => 100 + 30 * i
+  }).add({
+    targets: '.ml4 .letters-2',
+    translateX: [40,0],
+    translateZ: 0,
+    opacity: [0,1],
+    easing: "easeOutExpo",
+    duration: 1200,
+    delay: (el, i) => 500 + 30 * i
+  }).add({
+    targets: '.ml4 .letters-2',
+    translateX: [0,-30],
+    opacity: [1,0],
+    easing: "easeInExpo",
+    duration: 1100,
+    delay: (el, i) => 100 + 30 * i
+  }).add({
+    targets: '.ml4 .letters-3',
+    translateX: [40,0],
+    translateZ: 0,
+    opacity: [0,1],
+    easing: "easeOutExpo",
+    duration: 1200,
+    delay: (el, i) => 500 + 30 * i
+  }).add({
+    targets: '.ml4 .letters-3',
+    translateX: [0,-30],
+    opacity: [1,0],
+    easing: "easeInExpo",
+    duration: 1100,
+    delay: (el, i) => 100 + 30 * i
+  })
+  .add({
+    targets: '.ml4 .letters-4',
+    translateX: [40,0],
+    translateZ: 0,
+    opacity: [0,1],
+    easing: "easeOutExpo",
+    duration: 1200,
+    delay: (el, i) => 500 + 30 * i
+  }).add({
+    targets: '.ml4 .letters-4',
+    translateX: [0,-30],
+    opacity: [1,0],
+    easing: "easeInExpo",
+    duration: 1100,
+    delay: (el, i) => 100 + 30 * i
+  })
+.add({
+    targets: '.ml4 .letters-5',
+    translateX: [40,0],
+    translateZ: 0,
+    opacity: [0,1],
+    easing: "easeOutExpo",
+    duration: 1200,
+    delay: (el, i) => 500 + 30 * i
+  }).add({
+    targets: '.ml4 .letters-5',
+    translateX: [0,-30],
+    opacity: [1,0],
+    easing: "easeInExpo",
+    duration: 1100,
+    delay: (el, i) => 100 + 30 * i
+  })
+  .add({
+    targets: '.ml4',
+    opacity: 0
+  });
     </script>
 
 
