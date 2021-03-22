@@ -5,11 +5,22 @@
     <script src="https://kit.fontawesome.com/a52510d5ce.js" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"
             integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <!-- End Custom Scripts -->
 
 
     <!-- Custom Style -->
     <style>
+
+
+        body {
+            color: black;
+            background: black;
+        }
 
         .navbar {
             transition: all 0.5s ease-in-out;
@@ -37,8 +48,20 @@
             0px 30px 60px rgba(74, 74, 74, 1),
             inset 0px 0px 0px 1px rgba(255, 255, 255, 0.5);
             transform: translateY(-3px);
+        }
+
+
+        .miguelFerreiraButton {
+            transition: 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+        }
+
+        .miguelFerreiraButton:hover {
+            box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1),
+            0px 30px 60px rgba(74, 74, 74, 1),
+            inset 0px 0px 0px 1px rgba(255, 255, 255, 0.0);
             transform: translateY(-3px);
         }
+
 
         .contactButtonYellow {
             transition: 1s cubic-bezier(0.075, 0.82, 0.165, 1);
@@ -69,66 +92,171 @@
         }
 
         .shrink {
-            padding: 10px 0 !important;
+            padding: 20px 30px !important;
+        }
+
+        @media (min-width: 768px) {
+            .top-navbar {
+                display: inline-flex !important;
+            }
+        }
+
+
+        .hamburger {
+            cursor: pointer;
+            transition: all 0.25s;
+        }
+
+        .hamburger__top-bun,
+        .hamburger__bottom-bun {
+            content: '';
+            display: block;
+            width: 18px;
+            height: 1px;
+            background: #fff;
+            transform: rotate(0);
+            transition: all 0.25s;
+        }
+
+        .hamburger:hover [class*="-bun"] {
+            background: #999;
+        }
+
+        .hamburger__top-bun {
+            transform: translateY(-3px);
+        }
+
+        .hamburger__bottom-bun {
+            transform: translateY(3px);
+        }
+
+        .open {
+            transform: rotate(90deg);
+        }
+
+        .open .hamburger__top-bun {
+            transform: rotate(45deg) translateY(0px);
+        }
+
+        .open .hamburger__bottom-bun {
+            transform: rotate(-45deg) translateY(0px);
+        }
+
+        /* GLOBAL STYLES */
+
+        /*.ios_right_padding {
+            padding-right: env(safe-area-inset-right);
+            padding-right: 50px;
+        }
+
+        .ios_left_padding {
+            padding-left: env(safe-area-inset-left);
+            padding-left: 50px;
+        }*/
+
+        .dud {
+            color: #757575
+        }
+
+
+        .ml4 .letters {
+            position: absolute;
+            opacity: 1;
         }
 
 
     </style>
     <!-- End Custom Style -->
-    <div id="myNavbar"
-         class="transition pt-10 navbarClass navbar w-full p-3 z-40 fixed text-white bg-transparent dark-mode:text-gray-200 dark-mode:bg-gray-800">
-        <div x-data="{ open: false }"
-             class="flex flex-col max-w-screen-xl px-4 mx-auto md:items-center md:justify-between md:flex-row md:px-6 lg:px-8">
-            <div class="p-4 flex flex-row items-center justify-between">
-                <a href="#"
-                   class="contactButton text-sm font-bold font-mono tracking-widest rounded-lg">Miguel Ferreira</a>
-                <button class="md:hidden rounded-lg focus:outline-none focus:shadow-outline" @click="open = !open">
-                    <svg fill="currentColor" viewBox="0 0 20 20" class="w-6 h-6">
-                        <path x-show="!open" fill-rule="evenodd"
-                              d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z"
-                              clip-rule="evenodd"></path>
-                        <path x-show="open" fill-rule="evenodd"
-                              d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
-                              clip-rule="evenodd"></path>
-                    </svg>
-                </button>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+
+    <!-- Navbar -->
+    <nav id="myNavbar"
+         class="md:px-6 lg:px-8 transition pt-10 z-40 p-3 fixed navbarClass navbar flex items-center  flex-wrap w-full  text-white">
+
+        <div class="p-4 flex flex-row items-center justify-between ios_left_padding">
+            <a href="#"
+               class="miguelFerreiraButton text-sm font-bold font-mono tracking-widest rounded-md">Miguel Ferreira</a>
+        </div>
+
+        <button id="pipi"
+                class="transition text-white inline-flex p-3  rounded md:hidden ml-auto nav-toggler outline-none focus:outline-none"
+                data-target="#navigation">
+
+            <div class="hamburger">
+                <span class="hamburger__top-bun "></span>
+                <span class="hamburger__bottom-bun"></span>
             </div>
-            <nav :class="{'flex': open, 'hidden': !open}"
-                 class="flex-col flex-grow pb-4 md:pb-0 hidden md:flex md:justify-end md:flex-row">
-                <a class="contactButton px-4 py-1 mt-1 text-sm font-normal font-mono text-gray-900 bg-gray-200 rounded-full dark-mode:bg-gray-700 dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+
+            {##}
+            {#            <svg class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">#}
+            {#  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8h16M4 16h16" />#}
+            {#</svg>#}
+
+        </button>
+
+        <div class="hidden top-navbar w-full md:inline-flex md:flex-grow md:w-auto ios_right_padding"
+             id="navigation">
+
+            <div class="gap-y-5 p-10 md:p-0 md:inline-flex md:flex-row md:ml-auto flex flex-col pb-4 md:pb-0">
+
+                {% comment %}<a class="contactButton px-4 py-1 mt-1 text-sm font-normal font-mono text-gray-900 bg-gray-200 rounded-full dark-mode:bg-gray-700 dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
                    href="#">Início</a>
                 <a class="contactButton px-4 py-1 mt-1 text-sm font-normal font-mono bg-transparent rounded-full dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
-                   href="#">Sobre mim</a>
+                   href="#">Sobre mim</a>{% endcomment %}
                 <a class="contactButtonYellow px-4 py-1 mt-1 text-sm font-normal text-black font-mono bg-yellow-200 rounded-full  md:mt-0 md:ml-4 focus:text-gray-900 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
-                   href="#">Contacta-me</a>
-            </nav>
+                   href="#contact">Fala comigo!</a>
+
+
+
+            </div>
         </div>
-    </div>
+
+    </nav>
+
     <!-- End Navbar -->
 
 
     <div class="relative bg-white overflow-hidden p-10 pt-10 md:pt-10 lg:pt-20 lg:pb-20 md:pb-14"
          style="background-color: black">
-        <div class="container sm:px-8 mx-auto">
+        <div class="container  mx-auto">
             <!-- hero wrapper -->
-            <div class="pt-10 mt-10 grid grid-cols-1 md:grid-cols-11 sm:gap-8 md:gap-8 lg:gap-10 xl:gap-28 items-center">
+            <div class="pt-10 mt-10 grid grid-cols-1 md:grid-cols-12 lg:grid-cols-11  md:gap-8 lg:gap-10 xl:gap-28 items-center">
                 <!-- hero text -->
-                <div class="col-start-2 col-span-4">
+                <div class="col-start-2 col-span-4  md:col-start-1 md:col-span-7 lg:col-start-2 lg:col-span-4">
                     <div class="lg:text-left">
                         <h1 class="text-3xl tracking-wide font-bold text-gray-900 sm:text-3xl lg:text-3xl xl:text-4xl">
-                            <span class="block text-white">Olá, sou o Miguel!</span>
+                            <span class="block text-white">Olá, sou {# o Miguel !#}
+
+
+                                <h1 class="ml4 pb-10 pt-5">
+                                  <span class="letters letters-1">o Miguel Ferreira!</span>
+                                  <span class="letters letters-2">Paixão</span>
+                                  <span class="letters letters-3">Ética</span>
+                                    <span class="letters letters-4">Resiliência</span>
+                                  <span class="letters letters-5">Liderança</span>
+
+                                </h1>
+
+
+
+                                   {#   <div class="text"></div> #}
+
+                            </span>
                         </h1>
                         <p class="mt-3 text-base font-thin text-white sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-base lg:mx-0">
                             Acho que vais gostar de-me conhecer. Não tens muito a perder, desce e vê por ti mesmo! Sou
                             dinâmico e interessante, mas isso todos dizem. Sabes o que sou mesmo? Louco. Louco por fazer
                             o que gosto e por mostrar o quanto eu gosto! 😎
                         </p>
+
                         <div class="mt-5 sm:mt-8 sm:flex sm:justify-start lg:justify-start">
                             <div>
-                                <a href=""
+                                <a href="#first"
                                    class="contactButtonYellow w-full flex items-center justify-center rounded-full py-0.5 px-6 bg-yellow-200 border border-transparent text-base font-medium text-black md:text-base md:px-5">
-                                    Vê o que já fiz:
+                                    Conhece-me melhor
+                                    <i class="pl-4 fas fa-chevron-down"></i>
                                 </a>
+
                             </div>
                         </div>
                     </div>
@@ -136,8 +264,9 @@
 
 
                 <div class="hidden md:flex col-span-5 w-full justify-end items-end">
-                    <div class="w-80">
-                        <img src="https://drive.google.com/uc?export=view&id=1RHdbxbcwksjSS26VsEuZZi_K37252oSG">
+                    <div class=" w-80">
+                        <img loading="lazy" class="linkedinAnimation"
+                             src="https://drive.google.com/uc?export=view&id=1RHdbxbcwksjSS26VsEuZZi_K37252oSG">
                     </div>
 
                 </div>
@@ -150,62 +279,623 @@
     <!-- https://drive.google.com/uc?export=view&id=1RHdbxbcwksjSS26VsEuZZi_K37252oSG -->
     <!-- end image -->
 
-    <div class="relative bg-white overflow-hidden p-10 pt-10 md:pt-10 lg:pt-20 lg:pb-20 md:pb-14">
-        <div class="container sm:px-8 mx-auto">
+
+
+
+    <div id="first" class="relative bg-white overflow-hidden md:pt-14 lg:pb-20 md:pb-14 sm:p-0">
+        <div class="lg:container  lg:mx-auto">
             <!-- hero wrapper -->
-            <div class="grid grid-cols-1 md:grid-cols-11 sm:gap-8 md:gap-8 lg:gap-10 xl:gap-28 items-center">
+            <div class="grid grid-cols-1 md:grid-cols-12 md:gap-8 lg:gap-10 xl:gap-28 items-center  ">
                 <!-- hero text -->
-                <div class="transition col-start-2 col-span-10 rounded-2xl px-10 py-40" style="background: #FFF4E5">
-                    <p class="text-base font-thin text-black sm:text-lg mx-auto">
-                        Acho que vais gostar de-me conhecer. Não tens muito a perder, desce e vê por ti mesmo! Sou
-                        dinâmico e interessante, mas isso todos dizem. Sabes o que sou mesmo? Louco. Louco por fazer o
-                        que gosto e por mostrar o quanto eu gosto! 😎
+                <div class="firstBlock transition  col-start-2 col-span-10 md:rounded-2xl px-10 py-20  sm:rounded-none"
+                     style="background: #FFF4E5">
+                    <p class="firstBlockText text-base font-light text-black sm:text-lg mx-auto">
+                        Sou estudante de Engenharia Informática, estou no 3º ano e prestes a atirar-me para novos
+                        desafios.
+                        <span class="font-bold">
+                            Paixão, resiliência, ética e liderança
+                        </span>
+                        são os termos que definem o meu percurso pessoal e académico.
                     </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <div class="relative bg-white overflow-hidden lg:pb-20 md:pb-14 sm:p-0">
+        <div class="lg:container  lg:mx-auto">
+            <!-- hero wrapper -->
+            <div class="grid grid-cols-1 md:grid-cols-12 md:gap-8 lg:gap-10 xl:gap-28 items-center  ">
+                <!-- hero text -->
+                <div class="secondBlock transition col-start-2 col-span-10 md:rounded-2xl px-10 py-20  sm:rounded-none"
+                     style="background: #F0F4FF">
+                    <p class="secondBlockHeadline text-base font-bold text-indigo-900 sm:text-lg mx-auto">
+                        Ensino
+                    </p>
+
+                    <p class="secondBlockHeadline pt-2  text-base font-semibold text-indigo-300 sm:text-lg mx-auto">
+                        ISCTE-IUL
+                        Licenciatura em Engenharia Informática | 2018 - 2021 (Previsão)
+                    </p>
+                    <ul class="secondBlockText pl-10 pt-2 list-disc text-base font-light text-black sm:text-lg mx-auto">
+                        <li>Média de <span class="font-bold">17.98 valores</span>.</li>
+                        <li>Excelência (20 valores) em Inteligência Artifical e Programação em Rede.</li>
+                        <li>Especialização em Apresentações Profissionais, Data Mining and Extraction e Matemática
+                            Aplicada à Computação.
+                        </li>
+                        <li>Delegado de curso na totalidade da licenciatura.</li>
+                    </ul>
+
                 </div>
 
             </div>
         </div>
     </div>
+
+
+    <div class="relative bg-white overflow-hidden lg:pb-20 md:pb-14 sm:p-0">
+        <div class="lg:container  lg:mx-auto">
+            <!-- hero wrapper -->
+            <div class="grid grid-cols-1 md:grid-cols-12 md:gap-8 lg:gap-10 xl:gap-28 items-center  ">
+                <!-- hero text -->
+
+                <div class="thirdBlock transition  col-span-10 md:rounded-2xl px-10 py-20  sm:rounded-none sm:col-start-1 md:col-start-2"
+                     style="background: #FBFFEB">
+                    <p class="thirdBlockHeadline text-base font-bold text-green-900 sm:text-lg mx-auto">
+                        Projetos e Experiência Adicional
+                    </p>
+
+                    <p class="thirdBlockHeadline pt-2 text-base font-semibold text-green-400 sm:text-lg mx-auto">
+                        Ensino Secundário
+                    </p>
+
+                    <ul class="thirdBlockText pl-10 pt-2 list-disc text-base font-light text-black sm:text-lg mx-auto">
+                        <li>Responsável pelo programa Parlamento dos Jovens durante 2 anos.</li>
+                        <li>Membro eleito para a Comissão Executiva da Associação de Estudantes.</li>
+                        <li>Organização de debates e palestras para alunos e docentes.</li>
+                    </ul>
+
+
+                </div>
+
+
+            </div>
+        </div>
     </div>
 
-    <div class="relative bg-white overflow-hidden p-10 pt-10 md:pt-10 lg:pt-20 lg:pb-20 md:pb-14">
-        <div class="container sm:px-8 mx-auto">
+
+    <div class="relative  bg-white overflow-hidden   lg:pb-20 md:pb-14 sm:p-0">
+        <div class="lg:container  lg:mx-auto">
             <!-- hero wrapper -->
-            <div class="grid grid-cols-1 md:grid-cols-11 sm:gap-8 md:gap-8 lg:gap-10 xl:gap-28 items-center">
+            <div class="grid grid-cols-1 md:grid-cols-12 md:gap-8 lg:gap-10 xl:gap-28 items-center  ">
                 <!-- hero text -->
-                <div class="col-start-2 col-span-10 rounded-2xl px-10 py-40" style="background: #F0F4FF">
-                    <p class="text-base font-thin text-black sm:text-lg mx-auto">
-                        Acho que vais gostar de-me conhecer. Não tens muito a perder, desce e vê por ti mesmo! Sou
-                        dinâmico e interessante, mas isso todos dizem. Sabes o que sou mesmo? Louco. Louco por fazer o
-                        que gosto e por mostrar o quanto eu gosto! 😎
+                <div class="forthBlock transition col-start-2 col-span-10 md:rounded-2xl px-10 py-20 bg-red-100 sm:rounded-none"
+                     >
+                    <p class="forthBlockHeadline text-base font-bold text-red-900 sm:text-lg mx-auto">
+                        Soft & Hard Skills
                     </p>
+
+                    <ul class="forthBlockText pl-10 pt-2 list-disc text-base font-light text-black sm:text-lg mx-auto">
+                        <li>MySQL, Java, C, Python, Prolog e Scala.</li>
+                        <li>Excepcionalmente capaz em todos os aspetos de Java.</li>
+                        <li>Invulgar capacidade para aliar Design e Programação</li>
+                        <li>Pensamento criativo, lógico e crítico com capacidade de moderar conflitos. Empático</li>
+                    </ul>
+
                 </div>
 
             </div>
         </div>
     </div>
-    </div>
 
-    <div class="relative bg-white overflow-hidden p-10 pt-10 md:pt-10 lg:pt-20 lg:pb-20 md:pb-14">
-        <div class="container sm:px-8 mx-auto">
+
+
+    <!-- START SOFT SKILLS CERTIFICATES -->
+    <div class="relative bg-white overflow-hidden    lg:pb-20 md:pb-14 sm:p-0">
+        <div class="lg:container  lg:mx-auto">
             <!-- hero wrapper -->
-            <div class="grid grid-cols-1 md:grid-cols-11 sm:gap-8 md:gap-8 lg:gap-10 xl:gap-28 items-center">
+            <div class="grid grid-cols-1 md:grid-cols-12 md:gap-8 lg:gap-10 xl:gap-28 items-center  ">
                 <!-- hero text -->
-                <div class="col-start-2 col-span-10 rounded-2xl px-10 py-40" style="background: #FBFFEB">
-                    <p class="text-base font-thin text-black sm:text-lg mx-auto">
-                        Acho que vais gostar de-me conhecer. Não tens muito a perder, desce e vê por ti mesmo! Sou
-                        dinâmico e interessante, mas isso todos dizem. Sabes o que sou mesmo? Louco. Louco por fazer o
-                        que gosto e por mostrar o quanto eu gosto! 😎
-                    </p>
-                </div>
+                <div class="fifthBlock sm:col-start-1 md:col-start-2 lg:col-start-2 col-span-10 md:rounded-2xl px-5 py-5 bg-green-50 sm:sm:rounded-none">
 
+                    <div class="grid  grid-cols-6 rounded-2xl md:gap-8 lg:gap-10 items-start ">
+
+                        <div class="col-span-6 sm:col-span-3 rounded-2xl p-5  py-10">
+
+                            <p class="fifthBlockHeadline_1 text-base font-bold text-green-900 sm:text-lg mx-auto">
+                                Certificações Soft Skills
+                            </p>
+                            <p class="fifthBlockSubHeadline_1 text-base font-light text-black sm:text-lg mx-auto">
+                                Sim, existem certificações para soft skills!
+                            </p>
+
+                            <div class=" flex flex-row items-start gap-3 pt-5 flex-wrap">
+                                <p class="fifthBlockCertificate_1_1 flex text-base font-light  text-black sm:text-lg  bg-green-100 rounded-xl px-2.5">
+                                    Apresentações Profissionais [ISCTE]
+                                </p>
+
+                                <p class="fifthBlockCertificate_1_2 flex text-base font-light  text-black sm:text-lg  bg-green-100 rounded-xl px-2.5">
+                                    Técnicas de Comunicação [ISCTE]
+                                </p>
+
+                            </div>
+                           {% comment %} <div
+                               class=" self-center text-center flex-grow  transition px-2.5 py-0.5 rounded-lg bg-gray-200 text-gray-400 hover:text-gray-500">
+
+                                   <a href="mailto: mferreira.oeiras@gmail.com"  target="_blank">Relatório  <i class="fas fa-external-link-square-alt"></i></a>
+                            </div>{% endcomment %}
+
+                        </div>
+
+                        <div class="col-span-6 sm:col-span-3 p-5 py-10">
+                            <p class="fifthBlockHeadline_2 text-base font-bold text-green-900 sm:text-lg mx-auto">
+                                Certificações Técnicas
+                            </p>
+                            <p class="fifthBlockSubHeadline_2 text-base font-light text-black sm:text-lg mx-auto">
+                                Temos que estar na vanguarda! 🤓
+                            </p>
+
+                            <div class=" flex flex-row items-start gap-3 pt-5 flex-wrap">
+                                <p class="fifthBlockCertificate_2_1 text-base font-light  text-black sm:text-lg  bg-green-100 rounded-lg px-2.5">
+                                    Introduction to Machine Learning [Stanford]
+                                </p>
+
+                                <p class="fifthBlockCertificate_2_2 text-base font-light  text-black sm:text-lg  bg-green-100 rounded-lg px-2.5">
+                                    Convolution Networks [Deeplearning.ai]
+                                </p>
+
+                            </div>
+                           {% comment %} <div
+                               class=" self-center text-center flex-grow  transition px-2.5 py-0.5 rounded-lg bg-gray-200 text-gray-400 hover:text-gray-500">
+
+                                   <a href="mailto: mferreira.oeiras@gmail.com"  target="_blank">Relatório  <i class="fas fa-external-link-square-alt"></i></a>
+                            </div>{% endcomment %}
+
+                        </div>
+
+
+      {% comment %}                  <div class="hidden md:inline row-start-2 sm:row-start-2 sm:mx-10 sm:mb-10  lg:mx-0 lg:mb-0 lg:row-start-1 sm:col-start-1 lg:col-start-3 col-span-5 lg:col-span-3 rounded-2xl bg-white p-5 shadow-xl mb-10">
+
+                            <!-- Slider main container -->
+                            <div class="swiper-container ">
+                                <!-- Additional required wrapper -->
+                                <div class="swiper-wrapper">
+                                    <!-- Slides -->
+                                    <div class="swiper-slide"><img class=" max-h-full  "
+                                                                   src="{% static 'images/apresentacoes.gif' %}"></div>
+                                    <div class="swiper-slide"><img class=" max-h-full  "
+                                                                   src="{% static 'images/comunicacao.gif' %}"></div>
+                                </div>
+                                <!-- If we need pagination -->
+                                <div style="bottom: 0px;" class="swiper-pagination"></div>
+
+                            </div>
+
+
+                        </div>{% endcomment %}
+
+                    </div>
+
+                </div>
             </div>
         </div>
     </div>
+    <!-- END SOFT SKILLS CERTIFICATES -->
+
+    <!-- START PPM NOVO -->
+    <div class="relative bg-white overflow-hidden    lg:pb-20 md:pb-14 sm:p-0">
+        <div class="lg:container  lg:mx-auto">
+            <!-- hero wrapper -->
+            <div class="grid grid-cols-1 md:grid-cols-12 md:gap-8 lg:gap-10 xl:gap-28 items-center  ">
+                <!-- hero text -->
+                <div class="sm:col-start-1 md:col-start-2 lg:col-start-2 col-span-10 md:rounded-2xl px-5 py-5 bg-pink-100 sm:sm:rounded-none">
+
+                    <div class="grid  grid-cols-6 rounded-2xl   md:gap-0 lg:gap-10 items-center ">
+
+                        <div class="col-span-6 lg:col-span-3 rounded-2xl pl-5  sm:pt-20 sm:pb-10 lg:py-20">
+                            <p class="sixthBlock text-base font-bold text-pink-900 sm:text-lg mx-auto">
+                                Projeto de Programação Multiparadigma [19 valores]
+                            </p>
+                            <p class="sixthBlockSubHeadline text-base font-light text-black pt-5 sm:text-lg mx-auto">
+                                Aplicação para criar e gerir cadernos digitais num contexto académico.
+                            </p>
+
+                            <div class="flex flex-row items-start gap-3 pt-5 flex-wrap pb-5">
+                                <p class="sixthBlockTag_1 text-base font-light  text-black sm:text-lg  bg-pink-200 rounded-lg px-2.5">
+                                    SCALA
+                                </p>
+
+                                <p class="sixthBlockTag_2 text-base font-light  text-black sm:text-lg  bg-pink-200 rounded-lg px-2.5">
+                                    CSS
+                                </p>
+
+                                <p class="sixthBlockTag_3 text-base font-light  text-black sm:text-lg  bg-pink-200 rounded-lg px-2.5">
+                                    Programação Funcional
+                                </p>
+
+
+                            </div>
+
+
+                        </div>
+
+                        <div class="transition row-start-2 mx-5 mb-10  lg:mx-5 lg:mb-0 lg:row-start-1 col-start-1 lg:col-start-4 col-span-6 lg:col-span-3 rounded-2xl bg-transparent  lg:h-full  ">
+
+                            <!-- Slider main container -->
+                            <iframe class="sixthBlockVideo bg-cover  rounded-2xl shadow-xl w-full sm:h-72 lg:h-full"
+                                    src="https://youtube.com/embed/eMv6Lv4YbpM" frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowfullscreen></iframe>
+
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
     </div>
+    <!-- END PPM NOVO -->
+
+
+     <!-- START STOCKS NOVO -->
+    <div class="relative bg-white overflow-hidden    lg:pb-20 md:pb-14 sm:p-0">
+        <div class="lg:container  lg:mx-auto">
+            <!-- hero wrapper -->
+            <div class="grid grid-cols-1 md:grid-cols-12 md:gap-8 lg:gap-10 xl:gap-28 items-center  ">
+                <!-- hero text -->
+                <div class="sm:col-start-1 md:col-start-2 lg:col-start-2 col-span-10 md:rounded-2xl px-5 py-5 bg-gray-200 sm:sm:rounded-none">
+
+                    <div class="grid  grid-cols-6 rounded-2xl   md:gap-0 lg:gap-10 items-center ">
+
+                        <div class="col-span-6 lg:col-span-3 rounded-2xl pl-5  sm:pt-20 sm:pb-10 lg:py-20">
+                            <p class="seventhBlock text-base font-bold text-green-900 sm:text-lg mx-auto">
+                                Processamento de Informação [20 valores]
+                            </p>
+                            <p class="seventhBlockSubHeadline text-base font-light text-black pt-5 sm:text-lg mx-auto">
+                                Gerador de empresas e índices bolsistas com tratamento estatístico e probabilístico, e cadeias de Markov.
+                            </p>
+
+                            <div class="flex flex-row items-start gap-3 pt-5 flex-wrap pb-5">
+                                <p class="seventhBlockTag_1 text-base font-light  text-black sm:text-lg  bg-gray-300 rounded-lg px-2.5">
+                                    Estatística e Probabilidades
+                                </p>
+
+
+                                <p class="seventhBlockTag_2 text-base font-light  text-black sm:text-lg  bg-gray-300 rounded-lg px-2.5">
+                                    Java
+                                </p>
+
+                                 <a href="https://drive.google.com/file/d/12_oDRbKgF52lHoJ9TbPL0kvov-eOHGOp/view?usp=sharing" target="_blank"
+                               class="seventhBlockTag_3 px-2.5 py-0.5 rounded-lg bg-gray-300 text-gray-600 hover:text-gray-900">
+                                Relatório
+                                <i class="fas fa-external-link-square-alt"></i>
+                            </a>
+
+                            </div>
+
+
+                        </div>
+
+                        <div class=" transition row-start-2 mx-5 mb-10  lg:mx-5 lg:mb-0 lg:row-start-1 col-start-1 lg:col-start-4 col-span-6 lg:col-span-3 rounded-2xl bg-transparent lg:h-full  ">
+
+                            <!-- Slider main container -->
+                            <iframe class="seventhBlockVideo shadow-xl  bg-cover  rounded-2xl  w-full sm:h-72 lg:h-full"
+                                    src="https://youtube.com/embed/5cpKBu-TXcQ" frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowfullscreen></iframe>
+
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- END STOCKS NOVO -->
+
+
+    {% comment %}<!-- START MINI MEETINGS -->
+    <div class="relative bg-white overflow-hidden   lg:pb-20 md:pb-14 sm:p-0">
+        <div class="container  mx-auto">
+            <!-- hero wrapper -->
+            <div class="grid grid-cols-1 md:grid-cols-12  md:gap-8 lg:gap-10 xl:gap-28 items-center">
+                <!-- hero text -->
+                <div class="col-start-2 col-span-10 rounded-2xl px-5 py-5 bg-blue-50">
+
+                    <div class="grid  grid-cols-5 rounded-2xl   md:gap-8 lg:gap-10 items-center bg-blue-50">
+
+                        <div class="col-span-2 rounded-2xl pl-10 py-20">
+                            <p class="text-base font-bold text-blue-900 sm:text-lg mx-auto">
+                                miniMeetings
+                            </p>
+                            <p class="text-base font-light text-black sm:text-lg mx-auto">
+                                Applicação para iOS e iPadOS para organizar reuniões online.
+                            </p>
+
+                            <div class="flex flex-row items-start gap-3 pt-5 flex-wrap pb-5">
+                                <p class=" text-base font-light  text-black sm:text-lg  bg-blue-100 rounded-lg px-2.5">
+                                    xCode
+                                </p>
+
+                                <p class=" text-base font-light  text-black sm:text-lg  bg-blue-100 rounded-lg px-2.5">
+                                    Swift
+                                </p>
+
+                                <p class="text-base font-light  text-black sm:text-lg  bg-blue-100 rounded-lg px-2.5">
+                                    Firebase
+                                </p>
+
+
+                            </div>
+
+                            <a href="https://github.com/miguel-arrf/miniMeeting" target="_blank"
+                               class="transition px-2.5 py-0.5 rounded-lg bg-blue-100 text-blue-400 hover:text-blue-500">
+                                Código
+                                <i class="fas fa-external-link-square-alt"></i>
+                            </a>
+
+                        </div>
+
+                        <div class="row-start-1 col-start-3 col-span-3 rounded-2xl bg-white px-10 py-20 shadow-xl">
+                            5555555555
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- END MINI MEETINGS -->{% endcomment %}
+
+
+    <!-- VIDEO -->
+    <!-- END VIDEO -->
+
+
+
+<div id="contact" class="bg-yellow-100 dark:bg-gray-800 ">
+    <div class="text-center w-full mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8 z-20">
+        <h2 class="text-3xl font-extrabold text-black dark:text-white sm:text-4xl">
+            <span class="block speakWithMe">
+                Queres falar comigo? Ótimo!
+            </span>
+        </h2>
+
+            <div class="speakWithMe_buttons mt-12 flex justify-center px-20">
+
+                <a href="mailto: mferreira.oeiras@gmail.com"  target="_blank"  class=" flex-grow-0 w-20 mx-2 py-2 px-4  bg-yellow-600 hover:bg-yellow-700 focus:ring-yellow-500 focus:ring-yellow-indigo-200 text-white transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2  rounded-2xl ">
+                    <i class=" fas fa-at"></i>
+                </a>
+
+                <a href="tel:929172414" class="flex-grow-0 mx-2 py-2 px-4 w-20  bg-yellow-600 hover:bg-yellow-700 focus:ring-yellow-500 focus:ring-yellow-indigo-200 text-white transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2  rounded-2xl ">
+                    <i class="fas fa-phone"></i>
+                </a>
+
+                <a href="http://linkedin.com/in/marrf" target="_blank" class="flex-grow-0 mx-2 py-2 px-4  w-20 bg-yellow-600 hover:bg-yellow-700 focus:ring-yellow-500 focus:ring-yellow-indigo-200 text-white transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2  rounded-2xl ">
+                   <i class="fab fa-linkedin"></i>
+                </a>
+
+            </div>
+    </div>
+</div>
+
+
+
+
+
+    <!-- Section 1 -->
+    <section class="text-gray-700 bg-black body-font">
+        <div class="container flex flex-col items-center px-8 py-8 mx-auto max-w-7xl sm:flex-row">
+            <a href="{% url 'main' %}"
+               class="footerText text-xl font-black leading-none text-yellow-200 select-none logo">MiguelFerreira<span
+                    class="text-yellow-800">.</span></a>
+
+            <span class="inline-flex justify-center mt-4 space-x-5 sm:ml-auto sm:mt-0 sm:justify-start">
+           
+            <a href="http://linkedin.com/in/marrf" target="_blank"
+               class="linkedinAnimation text-white hover:text-gray-500">
+                <span class="sr-only">Linkedin</span>
+                <i class="w-6 h-6 fab fa-linkedin-in fa-lg"></i>
+                
+            </a>
+
+            <a href="https://github.com/miguel-arrf/" target="_blank"
+               class="githubAnimation text-white hover:text-gray-500">
+                <span class="sr-only">GitHub</span>
+                <i class="fab fa-github fa-lg"></i>
+                
+            </a>
+
+        </span>
+        </div>
+    </section>
+
+
+
+
 
 
     <script>
+        var swiper = new Swiper('.swiper-container', {
+            pagination: {
+                el: '.swiper-pagination',
+            },
+        });
+    </script>
+
+
+
+
+
+    <script>
+        ScrollReveal().reveal('.firstBlock');
+        ScrollReveal().reveal('.firstBlockText', {delay: 500});
+
+        ScrollReveal().reveal('.secondBlock');
+        ScrollReveal().reveal('.secondBlockHeadline', {delay: 500});
+        ScrollReveal().reveal('.secondBlockText', {delay: 950});
+
+        ScrollReveal().reveal('.thirdBlock');
+        ScrollReveal().reveal('.thirdBlockHeadline', {delay: 500});
+        ScrollReveal().reveal('.thirdBlockText', {delay: 950});
+
+        ScrollReveal().reveal('.forthBlock');
+        ScrollReveal().reveal('.forthBlockHeadline', {delay: 500});
+        ScrollReveal().reveal('.forthBlockText', {delay: 950});
+
+        ScrollReveal().reveal('.fifthBlockHeadline_1', {origin: 'bottom', distance: '40px', delay: 500});
+        ScrollReveal().reveal('.fifthBlockSubHeadline_1', {origin: 'bottom', distance: '40px', delay: 800});
+        ScrollReveal().reveal('.fifthBlockCertificate_1_1', {origin: 'bottom', distance: '40px', delay: 1200});
+        ScrollReveal().reveal('.fifthBlockCertificate_1_2', {origin: 'bottom', distance: '40px', delay: 1300});
+
+
+        ScrollReveal().reveal('.fifthBlockHeadline_2', {origin: 'bottom', distance: '40px', delay: 500});
+        ScrollReveal().reveal('.fifthBlockSubHeadline_2', {origin: 'bottom', distance: '40px', delay: 800});
+        ScrollReveal().reveal('.fifthBlockCertificate_2_1', {origin: 'bottom', distance: '40px', delay: 1200});
+        ScrollReveal().reveal('.fifthBlockCertificate_2_2', {origin: 'bottom', distance: '40px', delay: 1300});
+
+        ScrollReveal().reveal('.sixthBlock', {origin: 'bottom', distance: '40px', delay: 500});
+        ScrollReveal().reveal('.sixthBlockSubHeadline', {origin: 'bottom', distance: '40px', delay: 800});
+        ScrollReveal().reveal('.sixthBlockTag_1', {origin: 'right', distance: '40px', delay: 1200});
+        ScrollReveal().reveal('.sixthBlockTag_2', {origin: 'right', distance: '40px', delay: 1300});
+        ScrollReveal().reveal('.sixthBlockTag_3', {origin: 'right', distance: '40px', delay: 1400});
+        ScrollReveal().reveal('.sixthBlockVideo', {origin: 'right', distance: '40px', delay: 1400});
+
+        ScrollReveal().reveal('.seventhBlock', {origin: 'bottom', distance: '40px', delay: 500});
+        ScrollReveal().reveal('.seventhBlockSubHeadline', {origin: 'bottom', distance: '40px', delay: 800});
+        ScrollReveal().reveal('.seventhBlockTag_1', {origin: 'right', distance: '40px', delay: 1200});
+        ScrollReveal().reveal('.seventhBlockTag_2', {origin: 'right', distance: '40px', delay: 1300});
+        ScrollReveal().reveal('.seventhBlockTag_3', {origin: 'right', distance: '40px', delay: 1400});
+        ScrollReveal().reveal('.seventhBlockVideo', {origin: 'right', distance: '40px', delay: 1400});
+
+        ScrollReveal().reveal('.speakWithMe', {origin: 'bottom', distance: '40px', delay: 500});
+        ScrollReveal().reveal('.speakWithMe_buttons', {origin: 'bottom', distance: '40px', delay: 1000});
+
+
+        ScrollReveal().reveal('.footerText', {origin: 'left', distance: '20px'});
+        ScrollReveal().reveal('.linkedinAnimation', {origin: 'right', distance: '40px', delay: 100});
+        ScrollReveal().reveal('.githubAnimation', {origin: 'right', distance: '20px'});
+
+
+    </script>
+
+    <script>
+        // ——————————————————————————————————————————————————
+        // TextScramble
+        // ——————————————————————————————————————————————————
+
+        class TextScramble {
+            constructor(el) {
+                this.el = el
+                this.chars = '!<>-_\\/[]{}—=+*^?#________'
+                this.update = this.update.bind(this)
+            }
+
+            setText(newText) {
+                const oldText = this.el.innerText
+                const length = Math.max(oldText.length, newText.length)
+                const promise = new Promise((resolve) => this.resolve = resolve)
+                this.queue = []
+                for (let i = 0; i < length; i++) {
+                    const from = oldText[i] || ''
+                    const to = newText[i] || ''
+                    const start = Math.floor(Math.random() * 40)
+                    const end = start + Math.floor(Math.random() * 40)
+                    this.queue.push({from, to, start, end})
+                }
+                cancelAnimationFrame(this.frameRequest)
+                this.frame = 0
+                this.update()
+                return promise
+            }
+
+            update() {
+                let output = ''
+                let complete = 0
+                for (let i = 0, n = this.queue.length; i < n; i++) {
+                    let {from, to, start, end, char} = this.queue[i]
+                    if (this.frame >= end) {
+                        complete++
+                        output += to
+                    } else if (this.frame >= start) {
+                        if (!char || Math.random() < 0.28) {
+                            char = this.randomChar()
+                            this.queue[i].char = char
+                        }
+                        output += `<span class="dud">${char}</span>`
+                    } else {
+                        output += from
+                    }
+                }
+                this.el.innerHTML = output
+                if (complete === this.queue.length) {
+                    this.resolve()
+                } else {
+                    this.frameRequest = requestAnimationFrame(this.update)
+                    this.frame++
+                }
+            }
+
+            randomChar() {
+                return this.chars[Math.floor(Math.random() * this.chars.length)]
+            }
+        }
+
+        // ——————————————————————————————————————————————————
+        // Example
+        // ——————————————————————————————————————————————————
+
+        const phrases = [
+            'o Miguel Ferreira',
+            'Paixão',
+            'Ética',
+            'Resiliência',
+            'Liderança'
+        ]
+
+        const el = document.querySelector('.text')
+        const fx = new TextScramble(el)
+
+        let counter = 0
+        const next = () => {
+            fx.setText(phrases[counter]).then(() => {
+                setTimeout(next, 1500)
+            })
+            counter = (counter + 1) % phrases.length
+        }
+
+        next()
+    </script>
+
+
+    <script>
+        $(document).ready(function () {
+            $(".nav-toggler").each(function (_, navToggler) {
+                var target = $(navToggler).data("target");
+                $(navToggler).on("click", function () {
+                    $(target).animate({
+                        height: "toggle",
+                    })
+                })
+            })
+        })
+
+        //$('.hamburger').click(function () {
+        //    $(this).toggleClass('open');
+        //});
+
+        $('#pipi').click(function () {
+            $('.hamburger').toggleClass('open');
+        });
+
+
         $(window).scroll(function () {
             if ($(document).scrollTop() > 100) {
                 $('#myNavbar').addClass('shrink');
@@ -213,6 +903,134 @@
                 $('#myNavbar').removeClass('shrink');
             }
         });
+    </script>
+
+    <script>
+
+
+        var ml4 = {};
+        ml4.opacityIn = [0, 1];
+        ml4.scaleIn = [0.2, 1];
+        ml4.scaleOut = 3;
+        ml4.durationIn = 800;
+        ml4.durationOut = 600;
+        ml4.delay = 500;
+
+        anime.timeline({loop: true})
+            .add({
+                targets: '.ml4 .letters-1',
+                translateX: [40, 0],
+                translateZ: 0,
+                opacity: [0, 1],
+                easing: "easeOutExpo",
+                duration: 1200,
+                delay: (el, i) => 500 + 30 * i
+            }).add({
+            targets: '.ml4 .letters-1',
+            translateX: [0, -30],
+            opacity: [1, 0],
+            easing: "easeInExpo",
+            duration: 1100,
+            delay: (el, i) => 100 + 30 * i
+        }).add({
+            targets: '.ml4 .letters-2',
+            translateX: [40, 0],
+            translateZ: 0,
+            opacity: [0, 1],
+            easing: "easeOutExpo",
+            duration: 1200,
+            delay: (el, i) => 500 + 30 * i
+        }).add({
+            targets: '.ml4 .letters-2',
+            translateX: [0, -30],
+            opacity: [1, 0],
+            easing: "easeInExpo",
+            duration: 1100,
+            delay: (el, i) => 100 + 30 * i
+        }).add({
+            targets: '.ml4 .letters-3',
+            translateX: [40, 0],
+            translateZ: 0,
+            opacity: [0, 1],
+            easing: "easeOutExpo",
+            duration: 1200,
+            delay: (el, i) => 500 + 30 * i
+        }).add({
+            targets: '.ml4 .letters-3',
+            translateX: [0, -30],
+            opacity: [1, 0],
+            easing: "easeInExpo",
+            duration: 1100,
+            delay: (el, i) => 100 + 30 * i
+        })
+            .add({
+                targets: '.ml4 .letters-4',
+                translateX: [40, 0],
+                translateZ: 0,
+                opacity: [0, 1],
+                easing: "easeOutExpo",
+                duration: 1200,
+                delay: (el, i) => 500 + 30 * i
+            }).add({
+            targets: '.ml4 .letters-4',
+            translateX: [0, -30],
+            opacity: [1, 0],
+            easing: "easeInExpo",
+            duration: 1100,
+            delay: (el, i) => 100 + 30 * i
+        })
+            .add({
+                targets: '.ml4 .letters-5',
+                translateX: [40, 0],
+                translateZ: 0,
+                opacity: [0, 1],
+                easing: "easeOutExpo",
+                duration: 1200,
+                delay: (el, i) => 500 + 30 * i
+            }).add({
+            targets: '.ml4 .letters-5',
+            translateX: [0, -30],
+            opacity: [1, 0],
+            easing: "easeInExpo",
+            duration: 1100,
+            delay: (el, i) => 100 + 30 * i
+        })
+            .add({
+                targets: '.ml4',
+                opacity: 0
+            });
+    </script>
+
+
+    <script>
+        $('a[href*="#"]')
+            // Remove links that don't actually link to anything
+            .not('[href="#"]')
+            .not('[href="#0"]')
+            .click(function (event) {
+                // On-page links
+                if (
+                    location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '')
+                    &&
+                    location.hostname == this.hostname
+                ) {
+                    // Figure out element to scroll to
+                    var target = $(this.hash);
+                    target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                    // Does a scroll target exist?
+                    if (target.length) {
+                        // Only prevent default if animation is actually gonna happen
+                        event.preventDefault();
+                        $('html, body').animate({
+                            scrollTop: target.offset().top
+                        }, 1000, function () {
+                            // Callback after animation
+                            // Must change focus!
+
+                        });
+                    }
+                }
+            });
     </script>
 
 
