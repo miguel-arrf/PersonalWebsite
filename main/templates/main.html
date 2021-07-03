@@ -178,7 +178,7 @@
                class="miguelFerreiraButton text-sm font-bold font-mono tracking-widest rounded-md">Miguel Ferreira</a>
         </div>
 
-        <button id="pipi"
+        <button id="hamburgerMenu"
                 class="transition text-white inline-flex p-3  rounded md:hidden ml-auto nav-toggler outline-none focus:outline-none"
                 data-target="#navigation">
 
@@ -265,10 +265,10 @@
                         <img loading="lazy" class="linkedinAnimation"
                              src="https://i.imgur.com/NNdT9te.png">
                     </div>
-{#                    <div class=" w-80">#}
-{#                        <img loading="lazy" class="linkedinAnimation"#}
-{#                             src="https://drive.google.com/uc?export=view&id=1RHdbxbcwksjSS26VsEuZZi_K37252oSG">#}
-{#                    </div>#}
+                    {#                    <div class=" w-80">#}
+                    {#                        <img loading="lazy" class="linkedinAnimation"#}
+                    {#                             src="https://drive.google.com/uc?export=view&id=1RHdbxbcwksjSS26VsEuZZi_K37252oSG">#}
+                    {#                    </div>#}
 
 
                 </div>
@@ -283,17 +283,80 @@
 
 
 
+    <div class="relative bg-green-50 overflow-hidden md:pb-4 sm:p-0">
+        <div class="lg:container  lg:mx-auto">
 
-    <div id="first" class="relative bg-white overflow-hidden md:pt-14 lg:pb-20 md:pb-14 sm:p-0">
+            <!-- hero wrapper -->
+            <div class="grid grid-cols-1 md:grid-cols-12 md:gap-8 lg:gap-10 xl:gap-28 items-center bg-green-50 ">
+                <!-- hero text -->
+                <div class=" bg-green-50 transition col-start-2 col-span-10 md:rounded-2xl px-10 py-20  rounded-none">
+
+                    <p class="italic font-black font-serif text-3xl ">
+                        O que estou a fazer?
+                    </p>
+
+
+                    <div class="firstBulletPoint flex flex-row items-center py-8">
+                        <div class="flex-grow-0">
+                            <i class="fas fa-briefcase"
+                               style="border-radius: 60px; padding: 0.5em; background-color: lightpink; margin-right: 10px"></i>
+                        </div>
+                        <div class="col-span-5">
+                            Estágio de verão na <span class="font-bold">EDP - Digital Global Unit</span> para a
+                            modelação e concretização de uma framework de aferição da ética coperativa em modelos de
+                            Inteligência Artificial.
+                        </div>
+                    </div>
+
+                    <div class="secondBulletPoint flex flex-row items-center">
+                        <div class="flex-grow-0">
+                            <i class="fas fa-microscope"
+                               style="border-radius: 60px; padding: 0.5em; background-color: lightblue; margin-right: 10px"></i>
+                        </div>
+                        <div class="col-span-5">
+                            Trabalho de investigação no <span class="font-bold">ISCTE-IUL</span> com uma bolsa de
+                            investigação de 6 meses.
+                        </div>
+                    </div>
+
+                    <div class="thirdBulletPoint flex flex-row items-center pt-8">
+                        <div class="flex-grow-0">
+                            <i class="fas fa-university"
+                               style="border-radius: 60px; padding: 0.5em; background-color: lightgray; margin-right: 10px"></i>
+                        </div>
+                        <div class="col-span-5">
+                            Mestrado em Engenharia Informática e de Computadores no <span class="font-bold">Instituto Superior Técnico</span>.
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div id="first" class="relative bg-white overflow-hidden md:pt-20 lg:pb-20 md:pb-14 sm:p-0">
         <div class="lg:container  lg:mx-auto">
             <!-- hero wrapper -->
             <div class="grid grid-cols-1 md:grid-cols-12 md:gap-8 lg:gap-10 xl:gap-28 items-center  ">
                 <!-- hero text -->
                 <div class="firstBlock transition  col-start-2 col-span-10 md:rounded-2xl px-10 py-20  sm:rounded-none"
                      style="background: #FFF4E5">
-                    <p class="firstBlockText text-base font-light text-black sm:text-lg mx-auto">
-                        Sou estudante de Engenharia Informática, estou no 3º ano e prestes a lançar-me para novos
-                        desafios.
+
+                    <p class="firstBlockText text-base font-bold text-yellow-900 sm:text-lg mx-auto">
+                        Quem sou?
+                    </p>
+
+                    <p class="firstBlockText text-base font-light text-black sm:text-lg mx-auto pt-2">
+                        Sou licenciado em Engenharia Informática <span class="font-bold">@ISCTE-IUL</span>, estou a
+                        estagiar na <span class="font-bold">EDP - Digital Global Unit</span> e a realizar um projeto de
+                        investigação no ISCTE-IUL.
+                        No próximo ano letivo estarei a estudar no mestrado em Engenharia Informática e de Computadores
+                        do <span class="font-bold">Instituto Superior Técnico</span>.
+
+                        </br>
+                        </br>
 
                         <span class="font-bold">Paixão</span>,
                         <span class="font-bold">
@@ -303,11 +366,12 @@
                         <span class="font-bold">
                               Ética
                         </span>
-                         e
+                        e
                         <span class="font-bold"> Liderança
                         </span>
 
                         são os termos que definem o meu percurso pessoal e académico.
+
                     </p>
                 </div>
             </div>
@@ -335,9 +399,11 @@
                     </p>
                     <ul class="secondBlockText pl-10 pt-2 list-disc text-base font-light text-black sm:text-lg mx-auto">
                         <li>Média de <span class="font-bold">18 valores</span>.</li>
-                        <li>Avaliação máxima em Inteligência Artifical e Programação em Rede.</li>
+                        <li>Avaliação máxima em Inteligência Artifical, Programação em Rede e em Sistemas de Informação
+                            Distribuídos.
+                        </li>
                         <li>Minor em Data Mining and Extraction e Matemática
-                            Aplicada à Computação.
+                            Aplicada à Computação [19 valores em ambas].
                         </li>
                         <li>Delegado de curso na totalidade da licenciatura.</li>
                     </ul>
@@ -387,13 +453,13 @@
             <div class="grid grid-cols-1 md:grid-cols-12 md:gap-8 lg:gap-10 xl:gap-28 items-center  ">
                 <!-- hero text -->
                 <div class="forthBlock transition col-start-2 col-span-10 md:rounded-2xl px-10 py-20 bg-red-100 sm:rounded-none"
-                     >
+                >
                     <p class="forthBlockHeadline text-base font-bold text-red-900 sm:text-lg mx-auto">
                         Soft & Hard Skills
                     </p>
 
                     <ul class="forthBlockText pl-10 pt-2 list-disc text-base font-light text-black sm:text-lg mx-auto">
-                        <li>MySQL, Java, C, Python, Prolog, Scala e Swift.</li>
+                        <li>MySQL, Java, C, Python, Prolog, Scala, Swift e MongoDB.</li>
                         <li>Elevada capacidade para aliar Design e Programação.</li>
                         <li>Pensamento criativo, lógico e crítico com capacidade de moderar conflitos. Empático.</li>
                         <li>Forte capacidade de liderança, comunicação e colaboração.</li>
@@ -418,32 +484,6 @@
 
                     <div class="grid  grid-cols-6 rounded-2xl md:gap-8 lg:gap-10 items-start ">
 
-                        <div class="col-span-6 sm:col-span-3 rounded-2xl p-5  py-10">
-
-                            <p class="fifthBlockHeadline_1 text-base font-bold text-green-900 sm:text-lg mx-auto">
-                                Certificações Soft Skills
-                            </p>
-{#                            <p class="fifthBlockSubHeadline_1 text-base font-light text-black sm:text-lg mx-auto">#}
-{#                                Sim, existem certificações para soft skills!#}
-{#                            </p>#}
-
-                            <div class=" flex flex-row items-start gap-3 pt-5 flex-wrap">
-                                <p class="fifthBlockCertificate_1_1 flex text-base font-light  text-black sm:text-lg  bg-green-100 rounded-xl px-2.5">
-                                    Apresentações Profissionais [ISCTE]
-                                </p>
-
-                                <p class="fifthBlockCertificate_1_2 flex text-base font-light  text-black sm:text-lg  bg-green-100 rounded-xl px-2.5">
-                                    Técnicas de Comunicação [ISCTE]
-                                </p>
-
-                            </div>
-                           {% comment %} <div
-                               class=" self-center text-center flex-grow  transition px-2.5 py-0.5 rounded-lg bg-gray-200 text-gray-400 hover:text-gray-500">
-
-                                   <a href="mailto: mferreira.oeiras@gmail.com"  target="_blank">Relatório  <i class="fas fa-external-link-square-alt"></i></a>
-                            </div>{% endcomment %}
-
-                        </div>
 
                         <div class="col-span-6 sm:col-span-3 p-5 py-10">
                             <p class="fifthBlockHeadline_2 text-base font-bold text-green-900 sm:text-lg mx-auto">
@@ -454,16 +494,21 @@
                             </p>
 
                             <div class=" flex flex-row items-start gap-3 pt-5 flex-wrap">
-{#                                <p class="fifthBlockCertificate_2_1 text-base font-light  text-black sm:text-lg  bg-green-100 rounded-lg px-2.5">#}
-{#                                    Introduction to Machine Learning [Stanford]#}
-{#                                </p>#}
+                                {#                                <p class="fifthBlockCertificate_2_1 text-base font-light  text-black sm:text-lg  bg-green-100 rounded-lg px-2.5">#}
+                                {#                                    Introduction to Machine Learning [Stanford]#}
+                                {#                                </p>#}
 
                                 <p class="fifthBlockCertificate_2_2 text-base font-light  text-black sm:text-lg  bg-green-100 rounded-lg px-2.5">
                                     Convolution Neural Networks [DeepLearning.AI]
                                 </p>
 
+                                <p class="fifthBlockCertificate_2_2 text-base font-light  text-black sm:text-lg  bg-green-100 rounded-lg px-2.5">
+                                    AI Workflow: Feature Engineering and Bias Detection [IBM]
+
+                                </p>
+
                             </div>
-                           {% comment %} <div
+                            {% comment %} <div
                                class=" self-center text-center flex-grow  transition px-2.5 py-0.5 rounded-lg bg-gray-200 text-gray-400 hover:text-gray-500">
 
                                    <a href="mailto: mferreira.oeiras@gmail.com"  target="_blank">Relatório  <i class="fas fa-external-link-square-alt"></i></a>
@@ -472,7 +517,35 @@
                         </div>
 
 
-      {% comment %}                  <div class="hidden md:inline row-start-2 sm:row-start-2 sm:mx-10 sm:mb-10  lg:mx-0 lg:mb-0 lg:row-start-1 sm:col-start-1 lg:col-start-3 col-span-5 lg:col-span-3 rounded-2xl bg-white p-5 shadow-xl mb-10">
+                        <div class="col-span-6 sm:col-span-3 rounded-2xl p-5  py-10">
+
+                            <p class="fifthBlockHeadline_1 text-base font-bold text-green-900 sm:text-lg mx-auto">
+                                Certificações Soft Skills
+                            </p>
+                            {#                            <p class="fifthBlockSubHeadline_1 text-base font-light text-black sm:text-lg mx-auto">#}
+                            {#                                Sim, existem certificações para soft skills!#}
+                            {#                            </p>#}
+
+                            <div class=" flex flex-row items-start gap-3 pt-5 flex-wrap">
+                                <p class="fifthBlockCertificate_1_1 flex text-base font-light  text-black sm:text-lg  bg-green-100 rounded-lg px-2.5">
+                                    Apresentações Profissionais [ISCTE]
+                                </p>
+
+                                <p class="fifthBlockCertificate_1_2 flex text-base font-light  text-black sm:text-lg  bg-green-100 rounded-lg px-2.5">
+                                    Técnicas de Comunicação [ISCTE]
+                                </p>
+
+                            </div>
+                            {% comment %} <div
+                               class=" self-center text-center flex-grow  transition px-2.5 py-0.5 rounded-lg bg-gray-200 text-gray-400 hover:text-gray-500">
+
+                                   <a href="mailto: mferreira.oeiras@gmail.com"  target="_blank">Relatório  <i class="fas fa-external-link-square-alt"></i></a>
+                            </div>{% endcomment %}
+
+                        </div>
+
+
+                        {% comment %}                  <div class="hidden md:inline row-start-2 sm:row-start-2 sm:mx-10 sm:mb-10  lg:mx-0 lg:mb-0 lg:row-start-1 sm:col-start-1 lg:col-start-3 col-span-5 lg:col-span-3 rounded-2xl bg-white p-5 shadow-xl mb-10">
 
                             <!-- Slider main container -->
                             <div class="swiper-container ">
@@ -556,7 +629,7 @@
     <!-- END PPM NOVO -->
 
 
-     <!-- START STOCKS NOVO -->
+    <!-- START STOCKS NOVO -->
     <div class="relative bg-white overflow-hidden    lg:pb-20 md:pb-14 sm:p-0">
         <div class="lg:container  lg:mx-auto">
             <!-- hero wrapper -->
@@ -571,7 +644,8 @@
                                 Projeto de Processamento de Informação [20 valores]
                             </p>
                             <p class="seventhBlockSubHeadline text-base font-light text-black pt-5 sm:text-lg mx-auto">
-                                Modelação de empresas e geração de cotações bolsistas com tratamento estatístico e probabilístico utilizando cadeias de Markov.
+                                Modelação de empresas e geração de cotações bolsistas com tratamento estatístico e
+                                probabilístico utilizando cadeias de Markov.
                             </p>
 
                             <div class="flex flex-row items-start gap-3 pt-5 flex-wrap pb-5">
@@ -584,11 +658,12 @@
                                     Java
                                 </p>
 
-                                 <a href="https://drive.google.com/file/d/12_oDRbKgF52lHoJ9TbPL0kvov-eOHGOp/view?usp=sharing" target="_blank"
-                               class="seventhBlockTag_3 px-2.5 py-0.5 rounded-lg bg-gray-300 text-gray-600 hover:text-gray-900">
-                                Relatório
-                                <i class="fas fa-external-link-square-alt"></i>
-                            </a>
+                                <a href="https://drive.google.com/file/d/12_oDRbKgF52lHoJ9TbPL0kvov-eOHGOp/view?usp=sharing"
+                                   target="_blank"
+                                   class="seventhBlockTag_3 px-2.5 py-0.5 rounded-lg bg-gray-300 text-gray-600 hover:text-gray-900">
+                                    Relatório
+                                    <i class="fas fa-external-link-square-alt"></i>
+                                </a>
 
                             </div>
 
@@ -674,31 +749,34 @@
 
 
 
-<div id="contact" class="bg-yellow-100 dark:bg-gray-800 ">
-    <div class="text-center w-full mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8 z-20">
-        <h2 class="text-3xl font-extrabold text-black dark:text-white sm:text-4xl">
+    <div id="contact" class="bg-yellow-100 dark:bg-gray-800 ">
+        <div class="text-center w-full mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8 z-20">
+            <h2 class="text-3xl font-extrabold text-black dark:text-white sm:text-4xl">
             <span class="block speakWithMe">
                 Queres falar comigo? Ótimo!
             </span>
-        </h2>
+            </h2>
 
             <div class="speakWithMe_buttons mt-12 flex justify-center px-20">
 
-                <a href="mailto: mferreira.oeiras@gmail.com"  target="_blank"  class=" flex-grow-0 w-20 mx-2 py-2 px-4  bg-yellow-600 hover:bg-yellow-700 focus:ring-yellow-500 focus:ring-yellow-indigo-200 text-white transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2  rounded-2xl ">
+                <a href="mailto: mferreira.oeiras@gmail.com" target="_blank"
+                   class=" flex-grow-0 w-20 mx-2 py-2 px-4  bg-yellow-600 hover:bg-yellow-700 focus:ring-yellow-500 focus:ring-yellow-indigo-200 text-white transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2  rounded-2xl ">
                     <i class=" fas fa-at"></i>
                 </a>
 
-                <a href="tel:929172414" class="flex-grow-0 mx-2 py-2 px-4 w-20  bg-yellow-600 hover:bg-yellow-700 focus:ring-yellow-500 focus:ring-yellow-indigo-200 text-white transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2  rounded-2xl ">
+                <a href="tel:929172414"
+                   class="flex-grow-0 mx-2 py-2 px-4 w-20  bg-yellow-600 hover:bg-yellow-700 focus:ring-yellow-500 focus:ring-yellow-indigo-200 text-white transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2  rounded-2xl ">
                     <i class="fas fa-phone"></i>
                 </a>
 
-                <a href="http://linkedin.com/in/marrf" target="_blank" class="flex-grow-0 mx-2 py-2 px-4  w-20 bg-yellow-600 hover:bg-yellow-700 focus:ring-yellow-500 focus:ring-yellow-indigo-200 text-white transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2  rounded-2xl ">
-                   <i class="fab fa-linkedin"></i>
+                <a href="http://linkedin.com/in/marrf" target="_blank"
+                   class="flex-grow-0 mx-2 py-2 px-4  w-20 bg-yellow-600 hover:bg-yellow-700 focus:ring-yellow-500 focus:ring-yellow-indigo-200 text-white transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2  rounded-2xl ">
+                    <i class="fab fa-linkedin"></i>
                 </a>
 
             </div>
+        </div>
     </div>
-</div>
 
 
 
@@ -714,14 +792,14 @@
             <span class="inline-flex justify-center mt-4 space-x-5 sm:ml-auto sm:mt-0 sm:justify-start">
            
             <a href="http://linkedin.com/in/marrf" target="_blank"
-               class="linkedinAnimation text-white hover:text-gray-500">
+               class="linkedinAnimation transition text-gray-500 hover:text-white">
                 <span class="sr-only">Linkedin</span>
                 <i class="w-6 h-6 fab fa-linkedin-in fa-lg"></i>
                 
             </a>
 
             <a href="https://github.com/miguel-arrf/" target="_blank"
-               class="githubAnimation text-white hover:text-gray-500">
+               class="githubAnimation transition text-gray-500 hover:text-white">
                 <span class="sr-only">GitHub</span>
                 <i class="fab fa-github fa-lg"></i>
                 
@@ -749,6 +827,12 @@
 
 
     <script>
+        ScrollReveal().reveal('.firstBulletPoint', {origin: 'right', distance: '40px', delay: 0});
+        ScrollReveal().reveal('.secondBulletPoint', {origin: 'right', distance: '40px', delay: 250});
+        ScrollReveal().reveal('.thirdBulletPoint', {origin: 'right', distance: '40px', delay: 500});
+
+
+
         ScrollReveal().reveal('.firstBlock');
         ScrollReveal().reveal('.firstBlockText', {delay: 500});
 
@@ -905,7 +989,7 @@
         //    $(this).toggleClass('open');
         //});
 
-        $('#pipi').click(function () {
+        $('#hamburgerMenu').click(function () {
             $('.hamburger').toggleClass('open');
         });
 
