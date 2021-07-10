@@ -31,27 +31,6 @@
             backdrop-filter: blur(20px) opacity(1);
         }
 
-        /*.signInButton {
-            transition: 1s cubic-bezier(0.075, 0.82, 0.165, 1);
-        }
-
-        .signInButton:hover {
-            box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1),
-            0px 30px 60px rgba(23, 0, 102, 0.5),
-            inset 0px 0px 0px 1px rgba(255, 255, 255, 0.5);
-            transform: translateY(-3px);
-        }*/
-
-        .contactButton {
-            transition: 1s cubic-bezier(0.075, 0.82, 0.165, 1);
-        }
-
-        .contactButton:hover {
-            box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1),
-            0px 30px 60px rgba(74, 74, 74, 1),
-            inset 0px 0px 0px 1px rgba(255, 255, 255, 0.5);
-            transform: translateY(-3px);
-        }
 
 
         .miguelFerreiraButton {
@@ -77,18 +56,6 @@
             transform: translateY(-3px);
         }
 
-        .transicao {
-            transform: rotateY(-20deg) rotateX(20deg);
-            perspective: 5000;
-            transform-origin: bottom left;
-            transition: 1s cubic-bezier(0.075, 0.82, 0.165, 1);
-        }
-
-        .transicao:hover {
-            transform: rotateY(0deg) rotateX(0deg);
-            filter: brightness(110%) saturate(110%);
-        }
-
         .navbarClass {
             transition: 1s cubic-bezier(0.075, 0.82, 0.165, 1);
             background: rgba(0, 0, 0, 0.3);
@@ -103,7 +70,6 @@
                 display: inline-flex !important;
             }
         }
-
 
         .hamburger {
             cursor: pointer;
@@ -145,23 +111,6 @@
             transform: rotate(-45deg) translateY(0px);
         }
 
-        /* GLOBAL STYLES */
-
-        /*.ios_right_padding {
-            padding-right: env(safe-area-inset-right);
-            padding-right: 50px;
-        }
-
-        .ios_left_padding {
-            padding-left: env(safe-area-inset-left);
-            padding-left: 50px;
-        }*/
-
-        .dud {
-            color: #757575
-        }
-
-
         .ml4 .letters {
             position: absolute;
             opacity: 1;
@@ -190,11 +139,6 @@
                 <span class="hamburger__bottom-bun"></span>
             </div>
 
-            {##}
-            {#            <svg class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">#}
-            {#  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8h16M4 16h16" />#}
-            {#</svg>#}
-
         </button>
 
         <div class="hidden top-navbar w-full md:inline-flex md:flex-grow md:w-auto ios_right_padding"
@@ -202,10 +146,6 @@
 
             <div class="sm:mr-0 md:mr-3.5 gap-y-5 p-10 md:p-0 md:inline-flex md:flex-row md:ml-auto flex flex-col pb-4 md:pb-0">
 
-                {% comment %}<a class="contactButton px-4 py-1 mt-1 text-sm font-normal font-mono text-gray-900 bg-gray-200 rounded-full dark-mode:bg-gray-700 dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
-                   href="#">Início</a>
-                <a class="contactButton px-4 py-1 mt-1 text-sm font-normal font-mono bg-transparent rounded-full dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
-                   href="#">Sobre mim</a>{% endcomment %}
                 <a class="contactButtonYellow px-4 py-1 mt-1 text-sm font-normal text-black font-mono bg-yellow-200 rounded-full  md:mt-0 md:ml-4 focus:text-gray-900 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
                    href="#contact">Fala comigo!</a>
             </div>
@@ -237,10 +177,6 @@
 
                                 </h1>
 
-
-
-                                   {#   <div class="text"></div> #}
-
                             </span>
                         </h1>
                         <p class="mt-3 text-base font-thin text-white sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-base lg:mx-0">
@@ -268,22 +204,11 @@
                         <img loading="lazy" class="linkedinAnimation"
                              src="https://i.imgur.com/NNdT9te.png">
                     </div>
-                    {#                    <div class=" w-80">#}
-                    {#                        <img loading="lazy" class="linkedinAnimation"#}
-                    {#                             src="https://drive.google.com/uc?export=view&id=1RHdbxbcwksjSS26VsEuZZi_K37252oSG">#}
-                    {#                    </div>#}
-
 
                 </div>
             </div>
         </div>
     </div>
-
-
-    <!-- image -->
-    <!-- https://drive.google.com/uc?export=view&id=1RHdbxbcwksjSS26VsEuZZi_K37252oSG -->
-    <!-- end image -->
-
 
 
     <div class="relative bg-green-50 overflow-hidden md:pb-4 sm:p-0">
@@ -345,7 +270,7 @@
             <div class="grid grid-cols-1 md:grid-cols-12 md:gap-8 lg:gap-10 xl:gap-28 items-center  ">
                 <!-- hero text -->
 
-                <p class="absolute col-start-2 col-span-10 ml-10 text-4xl font-bold mt-4 font-serif italic text-yellow-900 md:pt-2 sm:pt-10 sm:ml-10 xl:ml-20 quemSouAnimation" style="z-index: 20;">Quem sou</p>
+                <p class="absolute col-start-2 col-span-10 ml-10 text-4xl font-bold mt-4 font-serif italic text-yellow-900 md:pt-2 sm:pt-10 sm:ml-10 xl:ml-20 quemSouAnimation" style="z-index: 20; opacity: 0;">Quem sou</p>
 
                 <div class="firstBlock transition  col-start-2 col-span-10 md:rounded-2xl px-10 py-20  sm:rounded-none firstBlockFadeIn"
                      style="background: #FFF4E5; opacity: 0; z-index: 0">
@@ -498,9 +423,6 @@
                             </p>
 
                             <div class=" flex flex-row items-start gap-3 pt-5 flex-wrap">
-                                {#                                <p class="fifthBlockCertificate_2_1 text-base font-light  text-black sm:text-lg  bg-green-100 rounded-lg px-2.5">#}
-                                {#                                    Introduction to Machine Learning [Stanford]#}
-                                {#                                </p>#}
 
                                 <p class="fifthBlockCertificate_2_2 text-base font-light  text-black sm:text-lg  bg-green-100 rounded-lg px-2.5">
                                     Convolution Neural Networks [DeepLearning.AI]
@@ -512,11 +434,6 @@
                                 </p>
 
                             </div>
-                            {% comment %} <div
-                               class=" self-center text-center flex-grow  transition px-2.5 py-0.5 rounded-lg bg-gray-200 text-gray-400 hover:text-gray-500">
-
-                                   <a href="mailto: mferreira.oeiras@gmail.com"  target="_blank">Relatório  <i class="fas fa-external-link-square-alt"></i></a>
-                            </div>{% endcomment %}
 
                         </div>
 
@@ -526,9 +443,6 @@
                             <p class="fifthBlockHeadline_1 text-base font-bold text-green-900 sm:text-lg mx-auto">
                                 Certificações Soft Skills
                             </p>
-                            {#                            <p class="fifthBlockSubHeadline_1 text-base font-light text-black sm:text-lg mx-auto">#}
-                            {#                                Sim, existem certificações para soft skills!#}
-                            {#                            </p>#}
 
                             <div class=" flex flex-row items-start gap-3 pt-5 flex-wrap">
                                 <p class="fifthBlockCertificate_1_1 flex text-base font-light  text-black sm:text-lg  bg-green-100 rounded-lg px-2.5">
@@ -540,34 +454,9 @@
                                 </p>
 
                             </div>
-                            {% comment %} <div
-                               class=" self-center text-center flex-grow  transition px-2.5 py-0.5 rounded-lg bg-gray-200 text-gray-400 hover:text-gray-500">
-
-                                   <a href="mailto: mferreira.oeiras@gmail.com"  target="_blank">Relatório  <i class="fas fa-external-link-square-alt"></i></a>
-                            </div>{% endcomment %}
 
                         </div>
 
-
-                        {% comment %}                  <div class="hidden md:inline row-start-2 sm:row-start-2 sm:mx-10 sm:mb-10  lg:mx-0 lg:mb-0 lg:row-start-1 sm:col-start-1 lg:col-start-3 col-span-5 lg:col-span-3 rounded-2xl bg-white p-5 shadow-xl mb-10">
-
-                            <!-- Slider main container -->
-                            <div class="swiper-container ">
-                                <!-- Additional required wrapper -->
-                                <div class="swiper-wrapper">
-                                    <!-- Slides -->
-                                    <div class="swiper-slide"><img class=" max-h-full  "
-                                                                   src="{% static 'images/apresentacoes.gif' %}"></div>
-                                    <div class="swiper-slide"><img class=" max-h-full  "
-                                                                   src="{% static 'images/comunicacao.gif' %}"></div>
-                                </div>
-                                <!-- If we need pagination -->
-                                <div style="bottom: 0px;" class="swiper-pagination"></div>
-
-                            </div>
-
-
-                        </div>{% endcomment %}
 
                     </div>
 
@@ -693,66 +582,6 @@
     <!-- END STOCKS NOVO -->
 
 
-    {% comment %}<!-- START MINI MEETINGS -->
-    <div class="relative bg-white overflow-hidden   lg:pb-20 md:pb-14 sm:p-0">
-        <div class="container  mx-auto">
-            <!-- hero wrapper -->
-            <div class="grid grid-cols-1 md:grid-cols-12  md:gap-8 lg:gap-10 xl:gap-28 items-center">
-                <!-- hero text -->
-                <div class="col-start-2 col-span-10 rounded-2xl px-5 py-5 bg-blue-50">
-
-                    <div class="grid  grid-cols-5 rounded-2xl   md:gap-8 lg:gap-10 items-center bg-blue-50">
-
-                        <div class="col-span-2 rounded-2xl pl-10 py-20">
-                            <p class="text-base font-bold text-blue-900 sm:text-lg mx-auto">
-                                miniMeetings
-                            </p>
-                            <p class="text-base font-light text-black sm:text-lg mx-auto">
-                                Applicação para iOS e iPadOS para organizar reuniões online.
-                            </p>
-
-                            <div class="flex flex-row items-start gap-3 pt-5 flex-wrap pb-5">
-                                <p class=" text-base font-light  text-black sm:text-lg  bg-blue-100 rounded-lg px-2.5">
-                                    xCode
-                                </p>
-
-                                <p class=" text-base font-light  text-black sm:text-lg  bg-blue-100 rounded-lg px-2.5">
-                                    Swift
-                                </p>
-
-                                <p class="text-base font-light  text-black sm:text-lg  bg-blue-100 rounded-lg px-2.5">
-                                    Firebase
-                                </p>
-
-
-                            </div>
-
-                            <a href="https://github.com/miguel-arrf/miniMeeting" target="_blank"
-                               class="transition px-2.5 py-0.5 rounded-lg bg-blue-100 text-blue-400 hover:text-blue-500">
-                                Código
-                                <i class="fas fa-external-link-square-alt"></i>
-                            </a>
-
-                        </div>
-
-                        <div class="row-start-1 col-start-3 col-span-3 rounded-2xl bg-white px-10 py-20 shadow-xl">
-                            5555555555
-                        </div>
-
-                    </div>
-
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- END MINI MEETINGS -->{% endcomment %}
-
-
-    <!-- VIDEO -->
-    <!-- END VIDEO -->
-
-
-
     <div id="contact" class="bg-yellow-100 dark:bg-gray-800 ">
         <div class="text-center w-full mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8 z-20">
             <h2 class="text-3xl font-extrabold text-black dark:text-white sm:text-4xl">
@@ -783,9 +612,6 @@
     </div>
 
 
-
-
-
     <!-- Section 1 -->
     <section class="text-gray-700 bg-black body-font">
         <div class="container flex flex-col items-center px-8 py-8 mx-auto max-w-7xl sm:flex-row">
@@ -814,10 +640,6 @@
     </section>
 
 
-
-
-
-
     <script>
         var swiper = new Swiper('.swiper-container', {
             pagination: {
@@ -825,10 +647,6 @@
             },
         });
     </script>
-
-
-
-
 
     <script>
         ScrollReveal().reveal('.firstBulletPoint', {origin: 'right', distance: '40px', delay: 0});
@@ -988,10 +806,6 @@
                 })
             })
         })
-
-        //$('.hamburger').click(function () {
-        //    $(this).toggleClass('open');
-        //});
 
         $('#hamburgerMenu').click(function () {
             $('.hamburger').toggleClass('open');
@@ -1170,6 +984,15 @@
             opacity: 1,
             duration: 1
         });
+
+        gsap.to(".quemSouAnimation", {
+            scrollTriger:{
+                trigger: ".quemSouAnimation",
+                toggleActions: "play none none none"
+            },
+            opacity: 1,
+            duration: 1
+        })
 
     </script>
 
