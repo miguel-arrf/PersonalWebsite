@@ -5,6 +5,8 @@
  * https://unpkg.com/browse/tailwindcss@latest/stubs/defaultConfig.stub.js
  */
 
+const colors = require('tailwindcss/colors')
+
 module.exports = {
     /**
      * Stylesheet generation mode.
@@ -51,7 +53,22 @@ module.exports = {
     ],
     darkMode: 'media', // or 'media' or 'class'
     theme: {
-        extend: {},
+        extend: {
+            colors:{
+                gray: colors.gray,
+                'custom-yellow':'#fff4e5',
+                'custom-blue':'#F0F4FF',
+                'custom-green':'#FBFFEB',
+                'vivid-yellow':'#E7CE4A',
+                'vivid-pink':'#B6B2FF',
+                'vivid-green':'#00E29A',
+            },
+            boxShadow: {
+                'vivid-yellow': '0px 12px 50px rgba(104, 92, 49, 0.8)',
+                'vivid-pink':'0px 12px 50px rgba(120, 117, 172, 0.8)',
+                'vivid-green':'0px 12px 50px rgba(1, 140, 96, 0.8)',
+      },
+        },
     },
     variants: {
         extend: {},
