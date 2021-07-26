@@ -67,6 +67,10 @@ module.exports = {
                 'vivid-yellow': '0px 12px 50px rgba(104, 92, 49, 0.8)',
                 'vivid-pink':'0px 12px 50px rgba(120, 117, 172, 0.8)',
                 'vivid-green':'0px 12px 50px rgba(1, 140, 96, 0.8)',
+
+                'vivid-blue': '0px 12px 50px rgba(59, 92, 130, 0.92)',
+                'vivid-purple': '0px 12px 50px rgba(168, 108, 158, 0.8)',
+                'vivid-orange': '0px 12px 50px rgba(140, 85, 1, 0.8)',
       },
         },
     },

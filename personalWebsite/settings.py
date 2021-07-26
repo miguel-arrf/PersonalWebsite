@@ -142,11 +142,11 @@ INTERNAL_IPS = [
     "85.243.22.243",
 ]
 
-#NPM_BIN_PATH = r"C:\Program Files\nodejs\npm.cmd"
+NPM_BIN_PATH = r"C:\Program Files\nodejs\npm.cmd"
 
 '''
 Para começar o servidor: 
     (a parte do tailwind css) -> python manage.py tailwind start 
-    (o servidor django, e com o ip certo) -> python manage.py runserver 192.168.72.145:8000
+    (o servidor django, e com o ip certo) -> python manage.py runserver 127.0.0.1:8000 (ou então colocar 192.168.72.145)
 
 '''
