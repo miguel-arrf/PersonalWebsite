@@ -215,32 +215,32 @@
 
   <div class="z-20 lg:container lg:mx-auto text-white mt-8 mt">
       <div class="grid grid-cols-1 md:grid-cols-12 items-center  m-0 md:mx-6 lg:mx-9">
-        <div class="m-5 md:m-0 bg-yellow-100 dark:bg-white dark:bg-opacity-5 dark:backdrop-filter dark:backdrop-blur-2xl md:col-start-2 col-span-10 rounded-2xl   lg:rounded-xl ">
+        <div class="m-5 md:m-0 bg-yellow-100 dark:bg-white dark:bg-opacity-5 dark:backdrop-filter dark:backdrop-blur-2xl md:col-start-2 col-span-10 rounded-2xl   lg:rounded-xl z-40">
 
            <div class="container flex flex-col items-center px-6 py-6 mx-auto max-w-7xl sm:flex-row gap-4 text-center font-bold flex-wrap">
 
 
-               <div class="bg-vivid-yellow rounded-xl p-1 px-2 flex-grow w-full sm:w-auto shadow-vivid-yellow">
+               <div class="transition shadow-xl bg-vivid-yellow rounded-xl p-1 px-2 flex-grow w-full sm:w-auto hover:shadow-vivid-yellow">
                 Who am I?
               </div>
 
-              <div class="bg-pink-400 rounded-xl p-1 px-2 flex-grow w-full sm:w-auto shadow-vivid-pink">
+              <div class="transition shadow-xl bg-blue-400 rounded-xl p-1 px-2 flex-grow w-full sm:w-auto hover:shadow-vivid-blue">
                 Education
               </div>
 
-              <div class="bg-green-400 rounded-xl p-1 px-2 flex-grow w-full sm:w-auto shadow-vivid-green">
+              <div class="transition shadow-xl bg-pink-400 rounded-xl p-1 px-2 flex-grow w-full sm:w-auto hover:shadow-vivid-pink">
                 Skills
               </div>
 
-              <div class="bg-blue-400 rounded-xl p-1 px-2 flex-grow w-full sm:w-auto shadow-vivid-blue">
+              <div class="transition shadow-xl bg-green-400 rounded-xl p-1 px-2 flex-grow w-full sm:w-auto hover:shadow-vivid-green">
                 Certifications
               </div>
 
-              <div class="bg-purple-400 rounded-xl p-1 px-2 flex-grow w-full sm:w-auto shadow-vivid-purple">
+              <div class="transition shadow-xl bg-purple-400 rounded-xl p-1 px-2 flex-grow w-full sm:w-auto hover:shadow-vivid-purple">
                 Projects
               </div>
 
-              <div class="bg-yellow-500 rounded-xl p-1 px-2 flex-grow w-full sm:w-auto shadow-vivid-orange">
+              <div class="transition shadow-xl bg-yellow-500 rounded-xl p-1 px-2 flex-grow w-full sm:w-auto hover:shadow-vivid-orange">
                 Others
               </div>
 
@@ -272,7 +272,7 @@
 
                     <div class="firstBulletPoint flex flex-row items-center py-8">
                         <div class="flex-grow-0">
-                            <i class="fas fa-briefcase bg-red-100 dark:bg-red-500 shadow-xl"
+                            <i class="fas fa-briefcase bg-red-100 dark:bg-red-500 shadow-xl dark:shadow-vivid-red"
                                style="border-radius: 60px; padding: 0.5em; margin-right: 10px"></i>
                         </div>
                         <div class="col-span-5">
@@ -282,7 +282,7 @@
 
                     <div class="secondBulletPoint flex flex-row items-center">
                         <div class="flex-grow-0">
-                            <i class="fas fa-microscope bg-blue-100 dark:bg-blue-500 shadow-xl"
+                            <i class="fas fa-microscope bg-blue-100 dark:bg-blue-500 shadow-xl dark:hover:shadow-vivid-blue"
                                style="border-radius: 60px; padding: 0.5em; margin-right: 10px"></i>
                         </div>
                         <div class="col-span-5">
@@ -292,7 +292,7 @@
 
                     <div class="thirdBulletPoint flex flex-row items-center pt-8">
                         <div class="flex-grow-0">
-                            <i class="fas fa-university bg-green-200 dark:bg-green-500 shadow-xl"
+                            <i class="fas fa-university bg-green-200 dark:bg-green-500 shadow-xl dark:shadow-vivid-green"
                                style="border-radius: 60px; padding: 0.5em; margin-right: 10px"></i>
                         </div>
                         <div class="col-span-5">
@@ -310,7 +310,7 @@
     <div class="relative overflow-hidden md:pt-20 lg:pb-20 md:pb-14 sm:p-0 bg-white dark:bg-black">
         <div class="lg:container  lg:mx-auto">
             <div class="grid grid-cols-1 md:grid-cols-12 md:gap-8 lg:gap-10 xl:gap-28 items-center  ">
-                <p class="-mt-7 md:block ml-10 hidden absolute col-start-2 col-span-10 text-4xl font-black p-2 rounded-lg font-serif italic text-white xl:ml-20 quemSouAnimation shadow-xl" style="z-index: 20; opacity: 1;background:#E7CE4A;">Who Am I?</p>
+                <p class="-mt-2 md:block ml-10 hidden absolute col-start-2 col-span-10 text-4xl font-black p-2 rounded-lg font-serif italic text-white xl:ml-20 quemSouAnimation shadow-xl" style="z-index: 20; opacity: 1;background:#E7CE4A;">Who Am I?</p>
                 <div class="m-5 firstBlock transition  col-start-2 col-span-10 md:rounded-2xl px-10 sm:py-10 md:py-16 py-20 rounded-xl bg-custom-yellow dark:bg-gray-800"
                      style="opacity: 1; z-index: 0">
 
@@ -342,11 +342,15 @@
     </div>
     <!-- END New Who Am I? -->
 
+
+
+
+
     <!-- START New Education -->
     <div class="relative overflow-hidden md:pt-20 lg:pb-20 md:pb-14 sm:p-0 bg-white dark:bg-black">
         <div class="lg:container  lg:mx-auto">
             <div class="grid grid-cols-1 md:grid-cols-12 md:gap-8 lg:gap-10 xl:gap-28 items-center  ">
-                <p class="-mt-7 md:block ml-10 hidden absolute col-start-2 col-span-10 text-4xl font-black p-2 rounded-lg font-serif italic text-white xl:ml-20 ensinoAnimation shadow-xl" style="z-index: 20; opacity: 1;background:#6461F5;">Education</p>
+                <p class="-mt-2 md:block ml-10 hidden absolute col-start-2 col-span-10 text-4xl font-black p-2 rounded-lg font-serif italic text-white xl:ml-20 ensinoAnimation shadow-xl" style="z-index: 20; opacity: 1;background:#6461F5;">Education</p>
                 <div class="m-5 secondBlock transition  col-start-2 col-span-10 md:rounded-2xl px-10 sm:py-10 md:py-16 py-10 bg-custom-blue  dark:bg-gray-800 rounded-xl"
                      style="opacity: 1; z-index: 0">
 
@@ -376,7 +380,7 @@
     <div class="relative overflow-hidden md:pt-20 lg:pb-20 md:pb-14 sm:p-0 bg-white dark:bg-black">
         <div class="lg:container lg:mx-auto">
             <div class="grid grid-cols-1 md:grid-cols-12 md:gap-8 lg:gap-10 xl:gap-28 items-center">
-                <p class="-mt-7 md:block ml-10 hidden absolute col-start-2 col-span-10 text-4xl font-black p-2 rounded-lg font-serif italic text-white xl:ml-20 shadow-xl outrasExperienciasAnimation"
+                <p class="-mt-2 md:block ml-10 hidden absolute col-start-2 col-span-10 text-4xl font-black p-2 rounded-lg font-serif italic text-white xl:ml-20 shadow-xl outrasExperienciasAnimation"
                    style="z-index: 20; opacity: 1;background:#17B384;">Other Experiences</p>
 
                 <div class="m-5 thirdBlock transition col-start-2 col-span-10 md:rounded-2xl px-10 sm:py-10 md:py-16 py-10 bg-red-200 rounded-xl dark:bg-gray-800 bg-custom-green"
@@ -399,32 +403,30 @@
     <!-- END New Other Experiences -->
 
 
-    <div class="relative  bg-white bg-white dark:bg-black overflow-hidden   lg:pb-20 md:pb-14 sm:p-0">
-        <div class="lg:container  lg:mx-auto">
-            <!-- hero wrapper -->
-            <div class="grid grid-cols-1 md:grid-cols-12 md:gap-8 lg:gap-10 xl:gap-28 items-center  ">
-                <!-- hero text -->
+   <!-- START New Other Experiences -->
+    <div class="relative overflow-hidden md:pt-20 lg:pb-20 md:pb-14 sm:p-0 bg-white dark:bg-black">
+        <div class="lg:container lg:mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-12 md:gap-8 lg:gap-10 xl:gap-28 items-center">
+                <p class="-mt-2 md:block ml-10 hidden absolute col-start-2 col-span-10 text-4xl font-black p-2 rounded-lg font-serif italic text-white xl:ml-20 shadow-xl softAndHardAnimation"
+                   style="z-index: 20; opacity: 1;background:#F56161;">Other Experiences</p>
 
-               <p class="absolute col-start-2 col-span-10 ml-10 text-4xl font-bold mt-4 font-serif italic text-red-900 md:pt-2 sm:pt-10 pt-5 sm:ml-10 xl:ml-20 softAndHardAnimation" style="z-index: 20; opacity: 0;">Soft & Hard Skills</p>
+                <div class="m-5 forthBlock transition col-start-2 col-span-10 md:rounded-2xl px-10 sm:py-10 md:py-16 py-10 bg-red-200 rounded-xl dark:bg-gray-800 bg-custom-red"
+                     style=" opacity: 1; z-index: 0">
+                    <p class="text-xl md:hidden col-start-2 col-span-1 w-max mb-5 font-black p-2 rounded-lg text-white shadow-xl"
+                       style="z-index: 20; opacity: 1;background:#F56161;">Other Experiences</p>
 
 
-                <div class="m-5 forthBlock transition col-start-2 col-span-10 md:rounded-2xl px-10 sm:py-28 md:py-20 py-20  bg-red-100 rounded-xl" style="opacity: 1; z-index: 0"
-                >
-
-
-                    <ul class="forthBlockText pl-10 pt-2 list-disc text-base font-light text-black sm:text-lg mx-auto">
-                        <li>MySQL, Java, C, Python, Prolog, Scala, Swift e MongoDB.</li>
-                        <li>High capacity to combine Design and Programming.</li>
-                        <li>Creative, logical and critical thinking with the ability to moderate conflict. Empathetic.</li>
+                    <ul class="forthBlockText pl-10 pt-2 list-disc text-base font-light dark:text-white text-black sm:text-lg mx-auto">
+                        <li>MySQL, Java, C, Python, Prolog, Scala, Swift, MongoDB, HTML, JavaScript, MatLab.</li>
+                        <li>High capacity to combine Design and Programming</li>
+                        <li>Creative, logical and critical thinking with the ability to moderate conflicts.</li>
                         <li>Strong leadership, communication and collaboration skills.</li>
-
                     </ul>
-
                 </div>
-
             </div>
         </div>
     </div>
+    <!-- END New Other Experiences -->
 
 
 
@@ -550,7 +552,7 @@
 
 
     <!-- START STOCKS NOVO -->
-    <div class="relative bg-white bg-white dark:bg-black overflow-hidden  lg:pb-20 md:pb-14 sm:p-0">
+    <div class="relative lg:pb-20 md:pb-14 sm:p-0 z-40">
         <div class="lg:container  lg:mx-auto">
             <!-- hero wrapper -->
             <div class="grid grid-cols-1 md:grid-cols-12 md:gap-8 lg:gap-10 xl:gap-28 items-center  ">
@@ -609,7 +611,10 @@
 
 
     <div class="relative md:pt-20 lg:pb-20 md:pb-14 sm:p-0 center bg-white dark:bg-black">
-    <img style="top: 50%; transform: translateY(-60%);" class="absolute w-full md:-mt-6 sm:-mt-9 -mt-11 sm:h-auto h-96" src="https://i.imgur.com/npEabx0.png" />
+    <img loading="lazy" class="absolute bottom-20 w-full md:-mt-6 sm:-mt-9 -mt-11 sm:h-auto h-96  filter -hue-rotate-90" src="https://i.imgur.com/sKEfgPV.png" />
+
+        <!-- possibility:     <img style="" class="absolute bottom-0 w-full md:-mt-6 sm:-mt-9 -mt-11 sm:h-auto h-96" src="https://i.imgur.com/npEabx0.png" />
+ -->
 
 <!-- <div class="flex place-content-center">
           <img class="absolute  -mt-12" src="https://i.imgur.com/npEabx0.png">
@@ -620,9 +625,9 @@
         <div class="m-5 md:m-0 bg-yellow-100 dark:bg-white dark:bg-opacity-5 dark:backdrop-filter dark:backdrop-blur-2xl md:col-start-2 col-span-10 rounded-2xl px-10 sm:py-10 md:py-16 py-10 lg:rounded-xl ">
           <p class="z-20 text-3xl text-center mb-5 font-black p-2 rounded-lg text-black dark:text-white">Do you want to get in touch with me? Great!</p>
           <div class="flex place-content-center gap-5">
-            <div class="z-20 transition font-black text-white w-max rounded-lg p-2 px-8 shadow-xl hover:shadow-md bg-vivid-yellow hover:shadow-vivid-yellow">@</div>
-            <div class="z-20 transition font-black text-white w-max rounded-lg p-2 px-8 shadow-xl hover:shadow-md bg-vivid-pink hover:shadow-vivid-pink">in</div>
-            <div class="z-20 transition font-black text-white w-max rounded-lg p-2 px-8 shadow-xl hover:shadow-md bg-vivid-green hover:shadow-vivid-green">@</div>
+            <div class="z-20 transition font-black text-white w-max rounded-lg p-2 px-8 shadow-xl bg-vivid-yellow hover:shadow-vivid-yellow">@</div>
+            <div class="z-20 transition font-black text-white w-max rounded-lg p-2 px-8 shadow-xl bg-vivid-pink hover:shadow-vivid-pink">in</div>
+            <div class="z-20 transition font-black text-white w-max rounded-lg p-2 px-8 shadow-xl bg-vivid-green hover:shadow-vivid-green">@</div>
           </div>
         </div>
       </div>
@@ -630,7 +635,7 @@
 
     <div class="z-20 lg:container lg:mx-auto text-white md:mt-8 bg-white dark:bg-black">
       <div class="grid grid-cols-1 md:grid-cols-12 items-center">
-        <div class="m-5 md:m-0 bg-black md:col-start-2 col-span-10 rounded-2xl   lg:rounded-xl ">
+        <div class="m-5 md:m-0 bg-yellow-100 dark:bg-white dark:bg-opacity-5 dark:backdrop-filter dark:backdrop-blur-2xl md:col-start-2 col-span-10 rounded-2xl   lg:rounded-xl ">
 
            <div class="container flex flex-col items-center px-8 py-8 mx-auto max-w-7xl sm:flex-row">
             <a href="{% url 'main' %}"
