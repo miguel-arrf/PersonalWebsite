@@ -27,7 +27,7 @@ SECRET_KEY = '_j)-)#qnbke3jf2c#=czz$y^smj(3dg*y)_6u!#1!znsxeg*9#'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['personal-website-miguel-arrf.herokuapp.com', '127.0.0.1', '192.168.72.145', '85.243.22.243', '192.168.72.161']
+ALLOWED_HOSTS = ['personal-website-miguel-arrf.herokuapp.com', '127.0.0.1', '192.168.72.145', '85.243.22.243', '192.168.72.161', '192.168.1.181']
 
 
 # Application definition

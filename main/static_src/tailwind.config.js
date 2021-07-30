@@ -51,7 +51,7 @@ module.exports = {
          */
         // '../../**/*.py'
     ],
-    darkMode: 'media', // or 'media' or 'class'
+    darkMode: 'class', // or 'media' or 'class' -> antes estava media
     theme: {
         extend: {
             colors:{
@@ -62,6 +62,8 @@ module.exports = {
                 'vivid-yellow':'#E7CE4A',
                 'vivid-pink':'#B6B2FF',
                 'vivid-green':'#00E29A',
+
+                'apple-yellow':'rgb(255,214,10)',
             },
             boxShadow: {
                 'vivid-yellow': '0px 12px 50px rgba(104, 92, 49, 0.8)',
