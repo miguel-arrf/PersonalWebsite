@@ -126,7 +126,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
 
 
-
     <!-- Navbar -->
     <nav id="myNavbar"
          class="md:px-6 lg:px-8 transition pt-10 z-50 p-3 fixed navbarClass navbar flex items-center  flex-wrap w-full  text-white">
@@ -162,8 +161,7 @@
     <!-- End Navbar -->
 
 
-    <div class="relative bg-white dark:bg-black overflow-hidden p-10 pt-10 md:pt-10 lg:pt-20 lg:pb-20 md:pb-14"
-         style="background-color: black">
+    <div class="relative p-10 pt-10 md:pt-10 lg:pt-20 lg:pb-20 md:pb-14 z-40">
         <div class="container  mx-auto">
             <!-- hero wrapper -->
             <div class="pt-10 mt-10 grid grid-cols-1 md:grid-cols-12 lg:grid-cols-11  md:gap-8 lg:gap-10 xl:gap-28 items-center">
@@ -213,6 +211,9 @@
         </div>
     </div>
 
+    <span style="top: 50%; transform: translateY(-60%);" class="fadeIn hidden md:inline absolute w-full md:-mt-6 sm:-mt-9 -mt-11 sm:h-auto h-96 z-30 filter hue-rotate-180" data-src="https://i.imgur.com/npEabx0.png"></span>
+
+{#    <img style="top: 50%; transform: translateY(-60%);" class="hidden md:inline absolute w-full md:-mt-6 sm:-mt-9 -mt-11 sm:h-auto h-96 z-30 filter hue-rotate-180" src="https://i.imgur.com/npEabx0.png" />#}
 
  {% comment %}   <!-- START Top Toolbar -->
     <div class="relative md:pt-20 lg:pb-20 md:pb-14 sm:p-0 center bg-black">
@@ -260,14 +261,12 @@
     <!-- END Top Toolbar -->{% endcomment %}
 
     <!-- START What am I Doing -->
-    <div class="relative bg-green-50 dark:bg-black md:pb-4 sm:p-0">
+    <div class="relative overflow-hidden bg-green-50 dark:bg-black md:pb-4 sm:p-0 dark:bg-opacity-0 ">
         <div class="lg:container  lg:mx-auto">
-
             <!-- hero wrapper -->
-            <div class="grid grid-cols-1 md:grid-cols-12 md:gap-8 lg:gap-10 xl:gap-28 items-center bg-green-50 dark:bg-black">
+            <div class="z-40 grid grid-cols-1 md:grid-cols-12 md:gap-8 lg:gap-10 xl:gap-28 items-center bg-green-50 dark:bg-black">
                 <!-- hero text -->
                 <div class="testeMargin m-5 bg-green-50 dark:bg-gray-800 transition col-start-2 col-span-10 md:rounded-2xl px-10 py-20  rounded-xl dark:text-white z-20">
-
                     <p class="italic font-black font-serif text-3xl ">
                         What am I doing?
                     </p>
@@ -298,7 +297,7 @@
                             <i class="fas fa-university bg-green-200 dark:bg-green-500 shadow-xl dark:shadow-vivid-green"
                                style="border-radius: 60px; padding: 0.5em; margin-right: 10px"></i>
                         </div>
-                        <div class="col-span-5">
+                        <div id="first" class="col-span-5">
                             Master's degree in Informatics and Computer Engineering student at <span class="font-bold">Instituto Superior Técnico</span>.
                         </div>
                     </div>
@@ -310,7 +309,7 @@
     <!-- END What am I Doing -->
 
     <!-- START New Who Am I? -->
-    <div class="relative overflow-hidden md:pt-20 lg:pb-20 md:pb-14 sm:p-0 bg-white dark:bg-black">
+    <div  class="relative overflow-hidden md:pt-20 lg:pb-20 md:pb-14 sm:p-0 bg-white dark:bg-black">
         <div class="lg:container  lg:mx-auto">
             <div class="grid grid-cols-1 md:grid-cols-12 md:gap-8 lg:gap-10 xl:gap-28 items-center  ">
                 <p class="-mt-2 md:block ml-10 hidden absolute col-start-2 col-span-10 text-4xl font-black p-2 rounded-lg font-serif italic text-white xl:ml-20 quemSouAnimation shadow-xl" style="z-index: 20; opacity: 0;background:#E7CE4A;">Who Am I?</p>
@@ -320,7 +319,7 @@
 
                       <p class="text-xl md:hidden col-start-2 col-span-1 w-max  mb-5 font-black p-2 rounded-lg  text-yellow-900 quemSouAnimation bg-custom-yellow shadow-xl" style="z-index: 20; opacity: 1;background:#E7CE4A;">Who Am I?</p>
 
-                    <p class="firstBlockText text-base font-light text-black dark:text-white sm:text-lg mx-auto">
+                    <p  class="firstBlockText text-base font-light text-black dark:text-white sm:text-lg mx-auto">
                         I have a degree in Computer Science and Engineering <span class="font-bold">@ISCTE-IUL</span>, I'm doing an internship at <span class="font-bold">EDP - Digital Global Unit</span> and a research project at ISCTE-IUL. Next school year I'll be studying for a master's degree in Informatics and Computer Engineering at <span class="font-bold">Instituto Superior Técnico</span>.
 
                         </br>
@@ -463,7 +462,7 @@
             </div>
 
 
-            <div class="md:mr-12">
+            <div class="md:mr-12 mt-8 sm:mt-0">
      <p class="fifthBlockHeadline_1 font-black mb-2 " style="color:#00E29A">Soft Skills Certifications</p>
 
           <div class="flex gap-3 text-white">
@@ -488,7 +487,9 @@
 </div>
 <!-- END New Certifications -->
 
-    <!-- START SOFT SKILLS CERTIFICATES -->
+
+
+{% comment %}    <!-- START SOFT SKILLS CERTIFICATES -->
     <div class="relative bg-white bg-white dark:bg-black overflow-hidden    lg:pb-20 md:pb-14 sm:p-0">
         <div class="lg:container  lg:mx-auto">
             <!-- hero wrapper -->
@@ -550,20 +551,18 @@
             </div>
         </div>
     </div>
-    <!-- END SOFT SKILLS CERTIFICATES -->
+    <!-- END SOFT SKILLS CERTIFICATES -->{% endcomment %}
 
 
 
 <!-- START New Projects -->
-<div class="relative overflow-hidden md:pt-20 lg:pb-20 md:pb-14 sm:p-0 bg-white dark:bg-black">
+<div class="relative overflow-hidden md:pt-20 lg:pb-14 md:pb-14 sm:p-0 z-40 bg-white dark:bg-black dark:bg-opacity-0">
   <div class="lg:container lg:mx-auto">
     <div class="grid grid-cols-1 md:grid-cols-12 md:gap-8 lg:gap-10 xl:gap-28 items-center">
       <p class="-mt-2 md:block ml-10 hidden absolute col-start-2 col-span-10 text-4xl font-black p-2 rounded-lg font-serif italic text-white xl:ml-20 shadow-xl softAndHardAnimation bg-pink-500" style="z-index: 20; opacity: 1;">Projects</p>
 
-      <div class="m-5 fifthBlock transition  md:col-start-2 col-start-1  col-span-10  md:rounded-2xl px-10 sm:py-10 md:py-16 py-10 bg-green-200 rounded-xl dark:bg-gray-800 bg-custom-green" style=" opacity: 1; z-index: 0">
-
-        <p class="text-xl md:hidden col-start-2 col-span-1 w-max mb-5 font-black p-2 rounded-lg text-white shadow-xl" style="z-index: 20; opacity: 1;background:#00E29A;">Projects</p>
-
+      <div class="projectMargins m-5 fifthBlock transition  md:col-start-2 col-start-1  col-span-10  md:rounded-2xl px-10 sm:py-10 md:py-16 py-10 bg-green-200 rounded-xl dark:bg-gray-800 bg-custom-green" style=" opacity: 1; z-index: 0">
+        <p class="text-xl md:hidden col-start-2 col-span-1 w-max mb-5 font-black p-2 rounded-lg text-white shadow-xl bg-pink-500" style="z-index: 20; opacity: 1;">Projects</p>
 
         <div class="grid lg:grid-cols-2 gap-10 grid-cols-1">
 
@@ -592,20 +591,25 @@
 
         <div class="bg-red-300 rounded-xl">
           <div class="p-5">
-            <div class="font-bold font-mono">Multiparadigm Programming Project [19 out of 20]</div>
-            <div class="font-light mt-3">Application for creating and managing digital notebooks in an academic context.</div>
+            <div class="font-bold font-mono">Information Processing Project [20 out of 20]</div>
+            <div class="font-light mt-3">Company modeling and stock generation with statistical and probabilistic treatment using Markov chains.</div>
 
                <div class="transition mt-3 row-start-2 mb-10  lg:mb-0 lg:row-start-1 col-start-1 lg:col-start-4 col-span-6 lg:col-span-3 rounded-2xl bg-transparent  lg:h-full  ">
                   <iframe class="sixthBlockVideo bg-cover  rounded-2xl shadow-xl w-full h-96"
-                                    src="https://youtube.com/embed/eMv6Lv4YbpM" frameborder="0"
+                                    src="https://youtube.com/embed/5cpKBu-TXcQ" frameborder="0"
                                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                                     allowfullscreen></iframe>
                 </div>
 
               <div class="flex flex-row items-start gap-3 pt-5 flex-wrap ">
-                <p class="sixthBlockTag_1 text-base font-light  text-black sm:text-lg  bg-red-200 rounded-lg px-2.5">SCALA</p>
-                <p class="sixthBlockTag_2 text-base font-light  text-black sm:text-lg  bg-red-200 rounded-lg px-2.5">CSS</p>
-                <p class="sixthBlockTag_3 text-base font-light  text-black sm:text-lg  bg-red-200 rounded-lg px-2.5">Functional Programming</p>
+                <p class="sixthBlockTag_1 text-base font-light  text-black sm:text-lg  bg-red-200 rounded-lg px-2.5">Statistics and Probabilities</p>
+                <p class="sixthBlockTag_2 text-base font-light  text-black sm:text-lg  bg-red-200 rounded-lg px-2.5">Java</p>
+                  <a href="https://drive.google.com/file/d/12_oDRbKgF52lHoJ9TbPL0kvov-eOHGOp/view?usp=sharing"
+                                   target="_blank"
+                                   class="sixthBlockTag_3 px-2.5 py-0.5 rounded-lg bg-red-200 text-base font-light  text-black">
+                                    Report
+                                    <i class="fas fa-external-link-square-alt"></i>
+                                </a>
               </div>
 
 
@@ -613,28 +617,7 @@
 
         </div>
 
-        <div class="bg-green-300 rounded-xl">
-          <div class="p-5">
-            <div class="font-bold font-mono">Multiparadigm Programming Project [19 out of 20]</div>
-            <div class="font-light mt-3">Application for creating and managing digital notebooks in an academic context.</div>
 
-               <div class="transition mt-3 row-start-2 mb-10  lg:mb-0 lg:row-start-1 col-start-1 lg:col-start-4 col-span-6 lg:col-span-3 rounded-2xl bg-transparent  lg:h-full  ">
-                  <iframe class="sixthBlockVideo bg-cover  rounded-2xl shadow-xl w-full h-96"
-                                    src="https://youtube.com/embed/eMv6Lv4YbpM" frameborder="0"
-                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                    allowfullscreen></iframe>
-                </div>
-
-              <div class="flex flex-row items-start gap-3 pt-5 flex-wrap ">
-                <p class="sixthBlockTag_1 text-base font-light  text-black sm:text-lg  bg-green-200 rounded-lg px-2.5">SCALA</p>
-                <p class="sixthBlockTag_2 text-base font-light  text-black sm:text-lg  bg-green-200 rounded-lg px-2.5">CSS</p>
-                <p class="sixthBlockTag_3 text-base font-light  text-black sm:text-lg  bg-green-200 rounded-lg px-2.5">Functional Programming</p>
-              </div>
-
-
-          </div>
-
-        </div>
 
         </div>
 
@@ -649,10 +632,7 @@
 
 
 
-
-
-
-    <!-- START PPM NOVO -->
+{% comment %}    <!-- START PPM NOVO -->
     <div class="relative bg-white bg-white dark:bg-black overflow-hidden    lg:pb-20 md:pb-14 sm:p-0">
         <div class="lg:container  lg:mx-auto">
             <!-- hero wrapper -->
@@ -765,13 +745,14 @@
             </div>
         </div>
     </div>
-    <!-- END STOCKS NOVO -->
+    <!-- END STOCKS NOVO -->{% endcomment %}
 
 
-    <div class="relative md:pt-20 dark:lg:pb-20 dark:md:pb-14 sm:p-0 center bg-white dark:bg-black">
+    <div class="relative dark:lg:pb-20 dark:md:pb-14 sm:p-0 center bg-white dark:bg-black">
 {#    <img loading="lazy" class="hidden dark:inline absolute bottom-20 w-full md:-mt-6 sm:-mt-9 -mt-11 sm:h-auto h-96  filter -hue-rotate-90" src="https://i.imgur.com/sKEfgPV.png" />#}
 {#    <img id="preload" onload="fadeIn(this)"  class="hidden absolute bottom-20 w-full md:-mt-6 sm:-mt-9 -mt-11 sm:h-auto h-96  filter -hue-rotate-90" src="https://i.imgur.com/sKEfgPV.png" />#}
-        <span class="fadeIn  absolute bottom-20 w-full md:-mt-6 sm:-mt-9 -mt-11 sm:h-auto h-96  filter -hue-rotate-90" data-src="https://i.imgur.com/sKEfgPV.png"></span>
+        <span class="fadeIn  absolute bottom-10 sm:bottom-20 w-full md:-mt-6 sm:-mt-9 -mt-11 sm:h-auto h-96 min-h-0  filter -hue-rotate-90"
+             data-src="https://i.imgur.com/sKEfgPV.png"></span>
         <!-- possibility:     <img style="" class="absolute bottom-0 w-full md:-mt-6 sm:-mt-9 -mt-11 sm:h-auto h-96" src="https://i.imgur.com/npEabx0.png" />
  -->
 
@@ -779,14 +760,14 @@
           <img class="absolute  -mt-12" src="https://i.imgur.com/npEabx0.png">
       </div>-->
 
-    <div class="z-20 lg:container lg:mx-auto text-white bg-white dark:bg-black">
+    <div id="contact" class="z-20 lg:container lg:mx-auto text-white bg-white dark:bg-black">
       <div class="grid grid-cols-1 md:grid-cols-12 items-center">
-        <div class="m-5 md:m-0 bg-yellow-100 dark:bg-white dark:bg-opacity-5 dark:backdrop-filter dark:backdrop-blur-2xl md:col-start-2 col-span-10 rounded-2xl px-10 sm:py-10 md:py-16 py-10 lg:rounded-xl ">
+        <div class="m-5 bg-yellow-100 dark:bg-white dark:bg-opacity-10 dark:backdrop-filter dark:backdrop-blur-2xl md:col-start-2 col-span-10 rounded-2xl px-10 sm:py-10 md:py-16 py-10 lg:rounded-xl ">
           <p class="z-20 text-3xl text-center mb-5 font-black p-2 rounded-lg text-black dark:text-white">Do you want to get in touch with me? Great!</p>
-          <div class="flex place-content-center gap-5">
-            <div class="z-20 transition font-black text-white w-max rounded-lg p-2 px-8 shadow-xl bg-vivid-yellow hover:shadow-vivid-yellow">@</div>
-            <div class="z-20 transition font-black text-white w-max rounded-lg p-2 px-8 shadow-xl bg-vivid-pink hover:shadow-vivid-pink">in</div>
-            <div class="z-20 transition font-black text-white w-max rounded-lg p-2 px-8 shadow-xl bg-vivid-green hover:shadow-vivid-green">@</div>
+          <div class="speakWithMe_buttons flex place-content-center gap-5">
+            <a href="mailto: mferreira.oeiras@gmail.com" target="_blank" class="z-20 transition font-black text-white w-max rounded-lg p-2 px-8 shadow-xl bg-vivid-yellow hover:shadow-vivid-yellow">@</a>
+            <a href="tel:929172414" class="z-20 transition font-black text-white w-max rounded-lg p-2 px-8 shadow-xl bg-vivid-pink hover:shadow-vivid-pink">in</a>
+            <a href="http://linkedin.com/in/marrf" target="_blank" class="z-20 transition font-black text-white w-max rounded-lg p-2 px-8 shadow-xl bg-vivid-green hover:shadow-vivid-green">@</a>
           </div>
         </div>
       </div>
@@ -794,7 +775,7 @@
 
     <div class="z-20 dark:lg:container dark:lg:mx-auto text-white md:mt-8 bg-white dark:bg-black">
       <div class="dark:grid dark:grid-cols-1 dark:md:grid-cols-12 items-center">
-        <div class="m-0 md:m-0 bg-black dark:bg-white dark:bg-opacity-5 dark:backdrop-filter dark:backdrop-blur-2xl md:col-start-2 col-span-10 dark:rounded-2xl   dark:lg:rounded-xl ">
+        <div class="m-5 bg-black dark:bg-white dark:bg-opacity-10 dark:backdrop-filter dark:backdrop-blur-2xl md:col-start-2 col-span-10 dark:rounded-2xl   dark:lg:rounded-xl ">
 
            <div class="container flex flex-col items-center px-8 py-8 mx-auto max-w-7xl sm:flex-row">
             <a href="{% url 'main' %}"
@@ -842,6 +823,8 @@ $(document).ready(function() {
             img.src = src;
         }
     });
+
+
 });
 
         var swiper = new Swiper('.swiper-container', {
@@ -908,10 +891,10 @@ $(document).ready(function() {
         ScrollReveal().reveal('.speakWithMe_buttons', {origin: 'bottom', distance: '40px', delay: 1000});
 
 
-        ScrollReveal().reveal('.footerText', {origin: 'left', distance: '20px'});
+        /*ScrollReveal().reveal('.footerText', {origin: 'left', distance: '20px'});
         ScrollReveal().reveal('.linkedinAnimation', {origin: 'right', distance: '40px', delay: 100});
         ScrollReveal().reveal('.githubAnimation', {origin: 'right', distance: '20px'});
-
+*/
 
     </script>
 
@@ -1119,7 +1102,6 @@ $(document).ready(function() {
             }
         });
 
-
         ScrollTrigger.matchMedia({
             "(min-width:  768px)": function() {
                 let tl = gsap.timeline({
@@ -1140,11 +1122,25 @@ $(document).ready(function() {
                     scrollTrigger:{
                         trigger: ".testeMargin",
                         start: "top center",
-                        end: "top 400px",
+                        end: "top 200px",
                         scrub: true,
                     }
                 });
                 tl.to(".testeMargin", {margin:'0 0 0 0', borderRadius: 0, rotation:0, ease:"none", duration:3, })
+            }
+        });
+
+        ScrollTrigger.matchMedia({
+            "(max-width:  768px)": function() {
+                let tl = gsap.timeline({
+                    scrollTrigger:{
+                        trigger: ".projectMargins",
+                        start: "top center",
+                        end: "top 200px",
+                        scrub: true,
+                    }
+                });
+                tl.to(".projectMargins", {margin:'0 0 0 0',paddingLeft: 20, paddingRight: 20, borderRadius: 0, rotation:0, ease:"none", duration:3, })
             }
         });
 
@@ -1214,7 +1210,6 @@ $(document).ready(function() {
         });
 */
 
-
         gsap.to(".quemSouAnimation", {
             scrollTrigger:{
                 trigger: ".quemSouAnimation",
@@ -1223,7 +1218,6 @@ $(document).ready(function() {
             opacity: 1,
             duration: 1
         })
-
 
         gsap.to(".ensinoAnimation", {
             scrollTrigger:{
@@ -1242,7 +1236,6 @@ $(document).ready(function() {
             opacity: 1,
             duration: 1
         })
-
 
         gsap.to(".certificationsAnimation", {
             scrollTrigger:{
