@@ -143,7 +143,7 @@ INTERNAL_IPS = [
     "192.168.1.118"
 ]
 
-#NPM_BIN_PATH = r"C:\Program Files\nodejs\npm.cmd"
+NPM_BIN_PATH = r"C:\Program Files\nodejs\npm.cmd"
 
 '''
 Para começar o servidor: 

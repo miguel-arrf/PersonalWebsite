@@ -120,6 +120,60 @@
             opacity: 1;
         }
 
+        .bg_video{
+            position: fixed;
+            right: 0;
+            bottom: 0;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            z-index: -1000;
+            background-size: cover;
+            opacity: 0%;
+        }
+
+        .bg_video_novo{
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            z-index: -1000;
+            background-size: cover;
+            opacity: 30%;
+        }
+
+        .bg_video_novo:before {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            z-index: 1000;
+            background-size: cover;
+            opacity: 100%;
+            background: red;
+        }
+
+        .gradient {
+                        position: absolute;
+            right: 0;
+            bottom: 0;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            background-size: cover;
+            background-image: linear-gradient(rgba(0,0,0,0.1), rgb(0,0,0));
+            object-fit: cover;
+          z-index: -900;
+}
+
 
     </style>
     <!-- End Custom Style -->
@@ -166,8 +220,17 @@
             <!-- hero wrapper -->
             <div class="pt-10 mt-10 grid grid-cols-1 md:grid-cols-12 lg:grid-cols-11  md:gap-8 lg:gap-10 xl:gap-28 items-center">
                 <!-- hero text -->
+                <div class="gradient">
+                    </div>
+                    <video id="backgroundVideo" autoplay loop poster="images/torres.jpg" class="bg_video_novo">
+                        <source src="{% static 'videos/74.mp4' %}" type="video/mp4">
+                    </video>
+
+
+
                 <div class="col-start-2 col-span-4  md:col-start-1 md:col-span-7 lg:col-start-2 lg:col-span-4">
                     <div class="lg:text-left">
+
                         <h1 class="text-3xl tracking-wide font-bold text-gray-900 sm:text-3xl lg:text-3xl xl:text-4xl">
                             <span class="block text-white">Hi, I am
 
@@ -209,62 +272,20 @@
                 </div>
             </div>
         </div>
+
+
+
     </div>
 
-    <span style="top: 50%; transform: translateY(-60%);" class="fadeIn hidden md:inline absolute w-full md:-mt-6 sm:-mt-9 -mt-11 sm:h-auto h-96 z-30 filter hue-rotate-180" data-src="https://i.imgur.com/npEabx0.png"></span>
 
 {#    <img style="top: 50%; transform: translateY(-60%);" class="hidden md:inline absolute w-full md:-mt-6 sm:-mt-9 -mt-11 sm:h-auto h-96 z-30 filter hue-rotate-180" src="https://i.imgur.com/npEabx0.png" />#}
 
- {% comment %}   <!-- START Top Toolbar -->
-    <div class="relative md:pt-20 lg:pb-20 md:pb-14 sm:p-0 center bg-black">
-    <img style="top: 50%; transform: translateY(-60%);" class="absolute w-full md:-mt-6 sm:-mt-9 -mt-11 sm:h-auto h-96 " src="https://i.imgur.com/npEabx0.png" />
-
-  <div class=" lg:container lg:mx-auto text-white mt-8 mt">
-      <div class="grid grid-cols-1 md:grid-cols-12 items-center  m-0 md:mx-6 lg:mx-9">
-        <div class="m-5 md:m-0 bg-white bg-opacity-5 backdrop-filter backdrop-blur-2xl md:col-start-2 col-span-10 rounded-2xl   lg:rounded-xl ">
-
-           <div class="container flex flex-col items-center px-6 py-6 mx-auto max-w-7xl sm:flex-row gap-4 text-center font-bold flex-wrap">
-
-
-               <div class="transition shadow-xl bg-vivid-yellow rounded-xl p-1 px-2 flex-grow w-full sm:w-auto hover:shadow-vivid-yellow">
-                Who am I?
-              </div>
-
-              <div class="transition shadow-xl bg-blue-400 rounded-xl p-1 px-2 flex-grow w-full sm:w-auto hover:shadow-vivid-blue">
-                Education
-              </div>
-
-              <div class="transition shadow-xl bg-pink-400 rounded-xl p-1 px-2 flex-grow w-full sm:w-auto hover:shadow-vivid-pink">
-                Skills
-              </div>
-
-              <div class="transition shadow-xl bg-green-400 rounded-xl p-1 px-2 flex-grow w-full sm:w-auto hover:shadow-vivid-green">
-                Certifications
-              </div>
-
-              <div class="transition shadow-xl bg-purple-400 rounded-xl p-1 px-2 flex-grow w-full sm:w-auto hover:shadow-vivid-purple">
-                Projects
-              </div>
-
-              <div class="transition shadow-xl bg-yellow-500 rounded-xl p-1 px-2 flex-grow w-full sm:w-auto hover:shadow-vivid-orange">
-                Others
-              </div>
-
-
-        </div>
-
-        </div>
-      </div>
-
-    </div>
-  </div>
-    <!-- END Top Toolbar -->{% endcomment %}
 
     <!-- START What am I Doing -->
     <div class="relative overflow-hidden bg-green-50 dark:bg-black md:pb-4 sm:p-0 dark:bg-opacity-0 ">
         <div class="lg:container  lg:mx-auto">
             <!-- hero wrapper -->
-            <div class="z-40 grid grid-cols-1 md:grid-cols-12 md:gap-8 lg:gap-10 xl:gap-28 items-center bg-green-50 dark:bg-black">
+            <div class="z-40 grid grid-cols-1 md:grid-cols-12 md:gap-8 lg:gap-10 xl:gap-28 items-center">
                 <!-- hero text -->
                 <div class="testeMargin m-5 bg-green-50 dark:bg-gray-800 transition col-start-2 col-span-10 md:rounded-2xl px-10 py-20  rounded-xl dark:text-white z-20">
                     <p class="italic font-black font-serif text-3xl ">
@@ -810,6 +831,12 @@
 
 
     <script>
+
+    $(document).ready(function (){
+       var vid = document.getElementById("backgroundVideo");
+        vid.playbackRate = 1;
+    });
+
 $(document).ready(function() {
     $(".fadeIn").each(function() {
         var src = $(this).data("src");
