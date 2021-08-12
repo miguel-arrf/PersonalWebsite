@@ -25,10 +25,9 @@
 
         .navbar {
             transition: all 0.5s ease-in-out;
-            -webkit-backdrop-filter: blur(20px) opacity(1);
-            backdrop-filter: blur(20px) opacity(1);
+            {#-webkit-backdrop-filter: blur(20px) opacity(1);#}
+            {#backdrop-filter: blur(20px) opacity(1);#}
         }
-
 
 
         .miguelFerreiraButton {
@@ -61,6 +60,8 @@
 
         .shrink {
             padding: 20px 30px !important;
+             -webkit-backdrop-filter: blur(20px) opacity(1);
+            backdrop-filter: blur(20px) opacity(1);
         }
 
         @media (min-width: 768px) {
@@ -114,87 +115,59 @@
             opacity: 1;
         }
 
-        .bg_video{
-            position: fixed;
-            right: 0;
-            bottom: 0;
-            min-width: 100%;
-            min-height: 100%;
-            width: auto;
-            height: auto;
-            z-index: -1000;
-            background-size: cover;
-            opacity: 0%;
-        }
 
         .bg_video_novo{
             position: absolute;
+            top: 0;
             right: 0;
             bottom: 0;
             min-width: 100%;
-            min-height: 100%;
             width: auto;
-            height: auto;
             z-index: -1000;
-            background-size: cover;
-            opacity: 30%;
+            opacity: 100%;
         }
 
         .bg_video_novo:before {
+            top: 0;
             position: absolute;
             right: 0;
             bottom: 0;
             min-width: 100%;
-            min-height: 100%;
+
             width: auto;
-            height: auto;
             z-index: 1000;
-            background-size: cover;
             opacity: 100%;
             background: red;
         }
 
-        .gradient {
-                        position: absolute;
-            right: 0;
-            bottom: 0;
-            min-width: 100%;
-            min-height: 100%;
-            width: auto;
-            height: auto;
-            background-size: cover;
-            background-image: linear-gradient(rgba(0,0,0,0.1), rgb(0,0,0));
-            object-fit: cover;
-          z-index: -900;
-}
+      {% comment %} @supports(padding: max(0px)) {
+
+            @media (max-width: 640px) {
+                .iphoneMargin {
+                    margin-top: calc(env(safe-area-inset-top) - 10rem);
+                }
+            }
+
+        }{% endcomment %}
 
 
     </style>
     <!-- End Custom Style -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
 
-
  <!-- Navbar -->
     <nav id="myNavbar"
-         class="md:px-6 lg:px-8 transition pt-10 z-50 p-3 fixed navbarClass navbar flex items-center  flex-wrap w-full  text-white">
+         class="md:px-6 lg:px-8 transition pt-10 z-50 p-3 fixed   navbar   flex items-center justify-center flex-wrap w-full  text-white">
+
 
         <div class="p-4 flex flex-row items-center justify-between ios_left_padding">
             <a href="#"
-               class="miguelFerreiraButton text-sm font-bold font-mono tracking-widest rounded-md">Miguel Ferreira</a>
+               class="miguelFerreiraButton text-sm font-bold font-mono tracking-widest rounded-md ">Miguel Ferreira</a>
         </div>
 
-        <button id="hamburgerMenu"
-                class="transition text-white inline-flex p-3  rounded md:hidden ml-auto nav-toggler outline-none focus:outline-none"
-                data-target="#navigation">
 
-            <div class="hamburger">
-                <span class="hamburger__top-bun "></span>
-                <span class="hamburger__bottom-bun"></span>
-            </div>
 
-        </button>
-
-        <div class="hidden top-navbar w-full md:inline-flex md:flex-grow md:w-auto ios_right_padding"
+       {% comment %} <div class="hidden top-navbar w-full md:inline-flex md:flex-grow md:w-auto ios_right_padding"
              id="navigation">
 
             <div class="sm:mr-0 md:mr-3.5 gap-y-5 p-10 md:p-0 md:inline-flex md:flex-row md:ml-auto flex flex-col pb-4 md:pb-0">
@@ -202,23 +175,22 @@
                 <a class="contactButtonYellow px-4 py-1 mt-1 text-sm font-normal text-black font-mono bg-yellow-200 rounded-full  md:mt-0 md:ml-4 focus:text-gray-900 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
                    href="#contact">Get in touch!</a>
             </div>
-        </div>
+        </div>{% endcomment %}
 
     </nav>
 
     <!-- End Navbar -->
 
 
-    <div class="relative p-10 pt-10 md:pt-10 lg:pt-20 lg:pb-20 md:pb-14 z-40">
+    <div class="parent relative p-10 pt-10 md:pt-10 lg:pt-20 lg:pb-20 md:pb-14 z-40">
         <div class="container  mx-auto">
             <!-- hero wrapper -->
             <div class="pt-10 mt-10 grid grid-cols-1 md:grid-cols-12 lg:grid-cols-11  md:gap-8 lg:gap-10 xl:gap-28 items-center">
                 <!-- hero text -->
-{#                <div class="gradient">#}
-{#                    </div>#}
-{#                    <video id="backgroundVideo" autoplay loop poster="images/torres.jpg" class="bg_video_novo" muted playsInline>#}
-{#                        <source src="https://herokuappmiguel.s3.eu-west-3.amazonaws.com/74_fast.mp4" type="video/mp4">#}
-{#                    </video>#}
+
+                    <video id="backgroundVideo" autoplay loop poster="images/torres.jpg" class="bg_video_novo  xl:-mt-80 md:-mt-24 top-0  iphoneMargin noPad" muted playsInline >
+                        <source src="https://herokuappmiguel.s3.eu-west-3.amazonaws.com/VideoGradient.mp4" type="video/mp4">
+                    </video>
 
 
 
@@ -270,6 +242,7 @@
 
 
     </div>
+
 
     <!-- START What am I Doing -->
     <div class="relative overflow-hidden bg-green-50 dark:bg-black md:pb-4 sm:p-0 dark:bg-opacity-0 ">
@@ -707,6 +680,8 @@
     $(document).ready(function (){
         var vid = document.getElementById("backgroundVideo");
          vid.playbackRate = 1;
+         vid.muted = true;
+         vid.play();
      });
 
     $(document).ready(function() {
@@ -904,7 +879,6 @@
 
     <script>
         gsap.registerPlugin(ScrollTrigger);
-
 
         ScrollTrigger.matchMedia({
             "(min-width:  768px)": function() {
