@@ -29,6 +29,7 @@
     <orderEntry type="library" name="jquery-3.5.1" level="application" />
     <orderEntry type="library" name="alpine" level="application" />
     <orderEntry type="library" name="a52510d5ce" level="application" />
+    <orderEntry type="library" name="gsap" level="application" />
   </component>
   <component name="TemplatesService">
     <option name="TEMPLATE_CONFIGURATION" value="Django" />
