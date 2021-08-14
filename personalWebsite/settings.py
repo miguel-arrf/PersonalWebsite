@@ -8,7 +8,7 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 """
 import os
 
-import django_heroku
+#import django_heroku
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -22,9 +22,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = '_j)-)#qnbke3jf2c#=czz$y^smj(3dg*y)_6u!#1!znsxeg*9#'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['personal-website-miguel-arrf.herokuapp.com']
+ALLOWED_HOSTS = ['personal-website-miguel-arrf.herokuapp.com', '127.0.0.1', '192.168.72.145', '85.243.22.243', '192.168.72.161', '192.168.1.181']
 
 
 # Application definition
@@ -51,9 +51,9 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
-SECURE_SSL_REDIRECT = True
-# SECURE_SSL_REDIRECT = False
+# SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+# SECURE_SSL_REDIRECT = True
+SECURE_SSL_REDIRECT = False
 
 ROOT_URLCONF = 'personalWebsite.urls'
 
@@ -131,4 +131,18 @@ STATIC_URL = '/static/'
 TAILWIND_APP_NAME = 'main'
 
 #active Django-Heroku
-django_heroku.settings(locals())
+#django_heroku.settings(locals())
+
+INTERNAL_IPS = [
+    "127.0.0.1",
+    "192.168.72.145"
+    "85.243.22.243",
+]
+
+#NPM_BIN_PATH = r"C:\Program Files\nodejs\npm.cmd"
+
+'''
+Para começar o servidor: 
+    (a parte do tailwind css) -> python manage.py tailwind start 
+    (o servidor django, e com o ip certo) -> python manage.py runserver 127.0.0.1:8000 (ou então colocar 192.168.72.145)
+'''
