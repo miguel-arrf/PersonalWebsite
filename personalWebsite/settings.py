@@ -24,9 +24,6 @@ SECRET_KEY = '_j)-)#qnbke3jf2c#=czz$y^smj(3dg*y)_6u!#1!znsxeg*9#'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['personal-website-miguel-arrf.herokuapp.com', '127.0.0.1', '192.168.72.145', '85.243.22.243', '192.168.72.161', '192.168.1.181', '192.168.1.128']
-
-
 # Application definition
 
 INSTALLED_APPS = [
@@ -53,7 +50,6 @@ MIDDLEWARE = [
 
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 SECURE_SSL_REDIRECT = True
-# SECURE_SSL_REDIRECT = False
 
 ROOT_URLCONF = 'personalWebsite.urls'
 
@@ -133,13 +129,9 @@ TAILWIND_APP_NAME = 'main'
 #active Django-Heroku
 #django_heroku.settings(locals())
 
-INTERNAL_IPS = [
-    "127.0.0.1",
-    "192.168.72.145"
-    "85.243.22.243",
-]
 
-#NPM_BIN_PATH = r"C:\Program Files\nodejs\npm.cmd"
+
+NPM_BIN_PATH = r"C:\Program Files\nodejs\npm.cmd"
 
 '''
 Para começar o servidor: 
