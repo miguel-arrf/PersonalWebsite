@@ -13,14 +13,21 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/ScrollTrigger.min.js"></script>
+
     <!-- End Custom Scripts -->
 
     <!-- Custom Style -->
      <style>
 
+     html{
+                       scroll-behavior: smooth;
+
+     }
+
         body {
             color: black;
             background: black;
+
         }
 
         .navbar {
@@ -185,10 +192,13 @@
 
 
 <!-- START hero header -->
+
+
+
 <div id="heroHeader" class="parent relative  dark:bg-black md:pb-4 sm:p-0 dark:bg-opacity-0 z-40">
 
 <video id="backgroundVideo" autoplay loop poster="https://herokuappmiguel.s3.eu-west-3.amazonaws.com/VideoGradient.jpg" class="bg_video_novo  xl:-mt-80 md:-mt-24 top-0  iphoneMargin noPad" muted playsInline >
-                        <source src="https://herokuappmiguel.s3.eu-west-3.amazonaws.com/VideoGradient.mp4" type="video/mp4">
+                        <source src="https://drive.google.com/u/0/uc?id=1lPAqE1oLkxMU6EBApR_eHPhV9_Q9GzXg&export=download#.mp4" type="video/mp4">
                     </video>
 
    <div class="lg:container  lg:mx-auto ">
@@ -201,7 +211,7 @@
           <div class="grid grid-cols-2">
 
 
-            <div class="col-span-2 md:col-span-1">
+            <div class="xl:mt-20 col-span-2 md:col-span-1">
                   <h1 class="text-3xl tracking-wide font-bold text-gray-900 sm:text-3xl lg:text-3xl xl:text-4xl">
                 <span class="block text-white"
                     >
@@ -227,40 +237,39 @@
             </div>
 
 
-            <div class="col-span-1">
-
-                        <!-- ME -->
-<div class="hidden md:flex col-span-5 w-full justify-end items-end content-end justify-items-end ">
-        <div class="w-max">
-          <img id="memoji" loading="lazy" height="237" class="linkedinAnimation order-last" src="https://herokuappmiguel.s3.eu-west-3.amazonaws.com/highResMemoji" style="width: 237px;"/>
+            <div class="col-span-1 ">
 
 
+               <div class="hidden md:flex col-span-5   w-full justify-end items-end">
+                    <div class=" md:w-60 xl:w-80">
+                        <img loading="lazy" class="linkedinAnimation"
+                             src="https://i.imgur.com/NNdT9te.png">
 
 
-          <div id="designRepeat" class=" relative w-max -bottom-0 ml-40 -mt-7 text-white bg-green-400 rounded-md px-1 font-bold shadow-extra-vivid-green">
-            Design
-          </div>
+                        <div id="designRepeat"
+                             class=" relative w-max -bottom-36 ml-48 -mt-40 xl:ml-60 text-white bg-green-400 rounded-md px-1 font-bold shadow-extra-vivid-green">
+                            Design
+                        </div>
 
-          <div id="mathsRepeat" class="relative w-max -right-7  bottom-8 text-white bg-pink-400 rounded-md px-1 font-bold shadow-extra-vivid-pink">
-            Maths
-          </div>
+                        <div id="mathsRepeat"
+                             class="relative w-max -right-7  -bottom-24 text-white bg-pink-400 rounded-md px-1 font-bold shadow-extra-vivid-pink">
+                            Maths
+                        </div>
+
+                        <div id="yearsRepeat"
+                             class="21yearsRepeat relative w-max mr-7 xl:-top-44 -top-32 right-4 text-white bg-yellow-400 rounded-md px-1 font-bold shadow-extra-vivid-yellow">
+                            21 years
+                        </div>
+
+                        <div id="nerdRepeat"
+                             class="relative w-max  xl:bottom-40 xl:ml-64 xl:-mt-20 bottom-32 ml-52  text-white bg-blue-400 rounded-md px-1 font-bold shadow-extra-vivid-blue">
+                            Nerd
+                        </div>
 
 
+                    </div>
 
-          <div id="yearsRepeat" class="21yearsRepeat relative w-max mr-7 bottom-48 right-4 text-white bg-yellow-400 rounded-md px-1 font-bold shadow-extra-vivid-yellow">
-            21 years
-          </div>
-
-          <div id="nerdRepeat" class="relative w-max  bottom-40 ml-48 -mt-7  text-white bg-blue-400 rounded-md px-1 font-bold shadow-extra-vivid-blue">
-            Nerd
-          </div>
-
-        </div>
-
-
-
-      </div>
-            <!-- END ME -->
+                </div>
 
 
             </div>
@@ -329,10 +338,15 @@
     <div  class="relative overflow-hidden md:pt-20 lg:pb-20 md:pb-14 sm:p-0 bg-white dark:bg-black">
         <div class="lg:container  lg:mx-auto">
             <div class="grid grid-cols-1 md:grid-cols-12 md:gap-8 lg:gap-10 xl:gap-28 items-center  ">
-                <p class="-mt-2 md:block ml-10 hidden absolute col-start-2 col-span-10 text-4xl font-black p-2 rounded-lg font-serif italic text-white xl:ml-20 quemSouAnimation shadow-xl" style="z-index: 20; opacity: 0;background:#E7CE4A;">Who Am I?</p>
 {#                funciona bem com col-start-1 e col-span-12 no ipad na vertical!#}
                 <div class="m-5 firstBlock transition  col-start-2 col-span-10 md:rounded-2xl px-10 sm:py-10 md:py-16 py-20 rounded-xl bg-custom-yellow dark:bg-gray-800"
                      style="opacity: 1; z-index: 0">
+
+
+                    <p class="-mt-20 -ml-28 absolute invisible md:visible text-4xl font-black p-2 rounded-lg font-serif italic text-white  shadow-xl quemSouAnimation" style="z-index: 20; opacity: 0;background:#E7CE4A;" >Who Am I?</p>
+                      <p class="text-xl md:hidden col-start-2 col-span-1 w-max  mb-5 font-black p-2 rounded-lg  text-yellow-900  bg-custom-yellow shadow-xl" style="z-index: 20; opacity: 1;background:#E7CE4A;">Who Am I?</p>
+
+
 
                       <p class="text-xl md:hidden col-start-2 col-span-1 w-max  mb-5 font-black p-2 rounded-lg  text-yellow-900 quemSouAnimation bg-custom-yellow shadow-xl" style="z-index: 20; opacity: 1;background:#E7CE4A;">Who Am I?</p>
 
@@ -370,11 +384,12 @@
     <div class="relative overflow-hidden md:pt-20 lg:pb-20 md:pb-14 sm:p-0 bg-white dark:bg-black">
         <div class="lg:container  lg:mx-auto">
             <div class="grid grid-cols-1 md:grid-cols-12 md:gap-8 lg:gap-10 xl:gap-28 items-center  ">
-                <p class="-mt-2 md:block ml-10 hidden absolute col-start-2 col-span-10 text-4xl font-black p-2 rounded-lg font-serif italic text-white xl:ml-20 ensinoAnimation shadow-xl" style="z-index: 20; opacity: 0;background:#6461F5;">Education</p>
                 <div class="m-5 secondBlock transition  col-start-2 col-span-10 md:rounded-2xl px-10 sm:py-10 md:py-16 py-10 bg-custom-blue  dark:bg-gray-800 rounded-xl"
                      style="opacity: 1; z-index: 0">
 
-                      <p class="text-xl md:hidden col-start-2 col-span-1 w-max  mb-5 font-black p-2 rounded-lg  text-blue-50 shadow-xl" style="z-index: 20; opacity: 1;background:#6461F5;">Education</p>
+                     <p class="-mt-20 -ml-28 absolute invisible md:visible text-4xl font-black p-2 rounded-lg font-serif italic text-white  shadow-xl ensinoAnimation" style="z-index: 20; opacity: 0;background:#6461F5;" >Education</p>
+                      <p class="text-xl md:hidden col-start-2 col-span-1 w-max  mb-5 font-black p-2 rounded-lg  text-blue-50  bg-custom-yellow shadow-xl" style="z-index: 20; opacity: 1;background:#6461F5;">Education</p>
+
 
                     <p class="secondBlockHeadline font-bold mb-2 dark:text-blue-200 text-blue-800">ISCTE-IUL Bachelor’s in Computer Science Engineering | 2018 - 2021</p>
 
@@ -400,13 +415,15 @@
     <div class="relative overflow-hidden md:pt-20 lg:pb-20 md:pb-14 sm:p-0 bg-white dark:bg-black">
         <div class="lg:container lg:mx-auto">
             <div class="grid grid-cols-1 md:grid-cols-12 md:gap-8 lg:gap-10 xl:gap-28 items-center">
-                <p class="-mt-2 md:block ml-10 hidden absolute col-start-2 col-span-10 text-4xl font-black p-2 rounded-lg font-serif italic text-white xl:ml-20 shadow-xl outrasExperienciasAnimation"
-                   style="z-index: 20; opacity: 0;background:#17B384;">Other Experiences</p>
+
 
                 <div class="m-5 thirdBlock transition col-start-2 col-span-10 md:rounded-2xl px-10 sm:py-10 md:py-16 py-10 bg-red-200 rounded-xl dark:bg-gray-800 bg-custom-green"
                      style=" opacity: 1; z-index: 0">
-                    <p class="text-xl md:hidden col-start-2 col-span-1 w-max mb-5 font-black p-2 rounded-lg text-white shadow-xl"
-                       style="z-index: 20; opacity: 1;background:#17B384;">Other Experiences</p>
+
+
+                     <p class="-mt-20 -ml-28 absolute invisible md:visible text-4xl font-black p-2 rounded-lg font-serif italic text-white  shadow-xl outrasExperienciasAnimation" style="z-index: 20; opacity: 0;background:#17B384;" >Other Experiences</p>
+                      <p class="text-xl md:hidden col-start-2 col-span-1 w-max  mb-5 font-black p-2 rounded-lg  text-blue-50  shadow-xl" style="z-index: 20; opacity: 1;background:#17B384;">Other Experiences</p>
+
 
                     <p class="thirdBlockHeadline font-black mb-2" style="color:#00E29A">High School</p>
 
@@ -427,13 +444,12 @@
     <div class="relative overflow-hidden md:pt-20 lg:pb-20 md:pb-14 sm:p-0 bg-white dark:bg-black">
         <div class="lg:container lg:mx-auto">
             <div class="grid grid-cols-1 md:grid-cols-12 md:gap-8 lg:gap-10 xl:gap-28 items-center">
-                <p class="-mt-2 md:block ml-10 hidden absolute col-start-2 col-span-10 text-4xl font-black p-2 rounded-lg font-serif italic text-white xl:ml-20 shadow-xl softAndHardAnimation"
-                   style="z-index: 20; opacity: 0;background:#F56161;">Soft & Hard Skills</p>
 
                 <div class="m-5 forthBlock transition col-start-2 col-span-10 md:rounded-2xl px-10 sm:py-10 md:py-16 py-10 bg-red-200 rounded-xl dark:bg-gray-800 bg-custom-red"
                      style=" opacity: 1; z-index: 0">
-                    <p class="text-xl md:hidden col-start-2 col-span-1 w-max mb-5 font-black p-2 rounded-lg text-white shadow-xl"
-                       style="z-index: 20; opacity: 1;background:#F56161;">Soft & Hard Skills</p>
+
+                      <p class="-mt-20 -ml-28 absolute invisible md:visible text-4xl font-black p-2 rounded-lg font-serif italic text-white  shadow-xl softAndHardAnimation" style="z-index: 20; opacity: 0;background:#F56161;" >Soft & Hard Skills</p>
+                      <p class="text-xl md:hidden col-start-2 col-span-1 w-max  mb-5 font-black p-2 rounded-lg  text-blue-50  shadow-xl" style="z-index: 20; opacity: 1;background:#F56161;">Soft & Hard Skills</p>
 
 
                     <ul class="forthBlockText pl-10 pt-2 list-disc text-base font-light dark:text-white text-black sm:text-lg mx-auto">
@@ -452,11 +468,13 @@
 <div class="relative overflow-hidden md:pt-20 lg:pb-20 md:pb-14 sm:p-0 bg-white dark:bg-black">
   <div class="lg:container lg:mx-auto">
     <div class="grid grid-cols-1 md:grid-cols-12 md:gap-8 lg:gap-10 xl:gap-28 items-center">
-      <p class="-mt-2 md:block ml-10 hidden absolute col-start-2 col-span-10 text-4xl font-black p-2 rounded-lg font-serif italic text-white xl:ml-20 shadow-xl certificationsAnimation" style="z-index: 20; opacity: 0;background:#00E29A;">Certifications</p>
 
       <div class="m-5 fifthBlock transition  md:col-start-2 col-start-1  col-span-10  md:rounded-2xl px-10 sm:py-10 md:py-16 py-10 bg-green-200 rounded-xl dark:bg-gray-800 bg-custom-green" style=" opacity: 1; z-index: 0">
 
-        <p class="text-xl md:hidden col-start-2 col-span-1 w-max mb-5 font-black p-2 rounded-lg text-white shadow-xl" style="z-index: 20; opacity: 1;background:#00E29A;">Certifications</p>
+          <p class="-mt-20 -ml-28 absolute invisible md:visible text-4xl font-black p-2 rounded-lg font-serif italic text-white  shadow-xl certificationsAnimation" style="z-index: 20; opacity: 0;background:#00E29A;" >Certifications</p>
+          <p class="text-xl md:hidden col-start-2 col-span-1 w-max  mb-5 font-black p-2 rounded-lg  text-blue-50  shadow-xl" style="z-index: 20; opacity: 1;background:#00E29A;">Certifications</p>
+
+
 
         <div class="flex gap-6 flex-col md:flex-row flex-wrap justify-between md:items-end">
 
@@ -576,10 +594,14 @@
 <div class="relative overflow-hidden md:pt-20 lg:pb-14 md:pb-14 sm:p-0 z-40 bg-white dark:bg-black dark:bg-opacity-0">
   <div class="lg:container lg:mx-auto">
     <div class="grid grid-cols-1 md:grid-cols-12 md:gap-8 lg:gap-10 xl:gap-28 items-center">
-      <p class="-mt-2 md:block ml-10 hidden absolute col-start-2 col-span-10 text-4xl font-black p-2 rounded-lg font-serif italic text-white xl:ml-20 shadow-xl softAndHardAnimation bg-pink-500" style="z-index: 20; opacity: 1;">Projects</p>
 
       <div class="projectMargins m-5 fifthBlock transition  md:col-start-2 col-start-1  col-span-10  md:rounded-2xl px-10 sm:py-10 md:py-16 py-10 bg-green-200 rounded-xl dark:bg-gray-800 bg-custom-green" style=" opacity: 1; z-index: 0">
-        <p class="text-xl md:hidden col-start-2 col-span-1 w-max mb-5 font-black p-2 rounded-lg text-white shadow-xl bg-pink-500" style="z-index: 20; opacity: 1;">Projects</p>
+
+
+              <p class="-mt-20 -ml-28 absolute invisible md:visible text-4xl font-black p-2 rounded-lg font-serif italic text-white  shadow-xl projectsAnimation bg-pink-500" style="z-index: 20; opacity: 0;" >Projects</p>
+          <p class="text-xl md:hidden col-start-2 col-span-1 w-max  mb-5 font-black p-2 rounded-lg  text-blue-50  shadow-xl bg-pink-500" style="z-index: 20; opacity: 1;">Projects</p>
+
+
 
         <div class="grid lg:grid-cols-2 gap-10 grid-cols-1">
 
@@ -651,8 +673,18 @@
     <div class="relative dark:lg:pb-20 dark:md:pb-14 sm:p-0 center bg-white dark:bg-black">
 {#    <img loading="lazy" class="hidden dark:inline absolute bottom-20 w-full md:-mt-6 sm:-mt-9 -mt-11 sm:h-auto h-96  filter -hue-rotate-90" src="https://i.imgur.com/sKEfgPV.png" />#}
 {#    <img id="preload" onload="fadeIn(this)"  class="hidden absolute bottom-20 w-full md:-mt-6 sm:-mt-9 -mt-11 sm:h-auto h-96  filter -hue-rotate-90" src="https://i.imgur.com/sKEfgPV.png" />#}
-        <span class="fadeIn  absolute bottom-10 sm:bottom-20 w-full md:-mt-6 sm:-mt-9 -mt-11 sm:h-auto h-96 min-h-0  filter -hue-rotate-90"
-             data-src="https://i.imgur.com/sKEfgPV.png"></span>
+
+
+        {# ESTE É O BOM #}
+{#        <span class="fadeIn  absolute bottom-10 sm:bottom-20 w-full md:-mt-6 sm:-mt-9 -mt-11 sm:h-auto h-96 min-h-0  filter -hue-rotate-90"#}
+{#             data-src="https://i.imgur.com/sKEfgPV.png"></span>#}
+
+        <img loading="lazy" class="absolute bottom-10 sm:bottom-20 w-full md:-mt-6 sm:-mt-9 -mt-11 sm:h-auto h-96 min-h-0  filter -hue-rotate-90"
+             src="https://drive.google.com/u/0/uc?id=1y3DAAKx9Y_Zq_5RM_4A0rwZUTY83zSSG&export=download#.mp4">
+
+
+
+
         <!-- possibility:     <img style="" class="absolute bottom-0 w-full md:-mt-6 sm:-mt-9 -mt-11 sm:h-auto h-96" src="https://i.imgur.com/npEabx0.png" />
  -->
 
@@ -973,6 +1005,20 @@
             "(min-width:  768px)": function() {
                 let tl = gsap.timeline({
                     scrollTrigger:{
+                        trigger: ".projectsAnimation",
+                        start: "top center",
+                        end: "top 100px",
+                        scrub: true,
+                    }
+                });
+                tl.to(".projectsAnimation", {y:-5, x:20, rotation:0, ease:"none", duration:3})
+            }
+        });
+
+        ScrollTrigger.matchMedia({
+            "(min-width:  768px)": function() {
+                let tl = gsap.timeline({
+                    scrollTrigger:{
                         trigger: ".softAndHardAnimation",
                         start: "top center",
                         end: "top 100px",
@@ -1081,6 +1127,8 @@
         });
 */
 
+
+
         gsap.to(".quemSouAnimation", {
             scrollTrigger:{
                 trigger: ".quemSouAnimation",
@@ -1111,6 +1159,15 @@
         gsap.to(".certificationsAnimation", {
             scrollTrigger:{
                 trigger: ".certificationsAnimation",
+                toggleActions: "play none play none"
+            },
+            opacity: 1,
+            duration: 1
+        })
+
+        gsap.to(".projectsAnimation", {
+            scrollTrigger:{
+                trigger: ".projectsAnimation",
                 toggleActions: "play none play none"
             },
             opacity: 1,
@@ -1182,6 +1239,9 @@
             toggleActions: "play pause play pause"
         }
         });
+
+
+
 
     </script>
 
