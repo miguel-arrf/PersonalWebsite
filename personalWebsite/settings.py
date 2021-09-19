@@ -8,7 +8,7 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 """
 import os
 
-#import django_heroku
+import django_heroku
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -23,6 +23,9 @@ SECRET_KEY = '_j)-)#qnbke3jf2c#=czz$y^smj(3dg*y)_6u!#1!znsxeg*9#'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
+
+ALLOWED_HOSTS = ['personal-website-miguel-arrf.herokuapp.com']
+
 
 # Application definition
 
@@ -50,6 +53,7 @@ MIDDLEWARE = [
 
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 SECURE_SSL_REDIRECT = True
+# SECURE_SSL_REDIRECT = False
 
 ROOT_URLCONF = 'personalWebsite.urls'
 
@@ -127,14 +131,4 @@ STATIC_URL = '/static/'
 TAILWIND_APP_NAME = 'main'
 
 #active Django-Heroku
-#django_heroku.settings(locals())
-
-
-
-NPM_BIN_PATH = r"C:\Program Files\nodejs\npm.cmd"
-
-'''
-Para começar o servidor: 
-    (a parte do tailwind css) -> python manage.py tailwind start 
-    (o servidor django, e com o ip certo) -> python manage.py runserver 127.0.0.1:8000 (ou então colocar 192.168.72.145)
-'''
+django_heroku.settings(locals())
