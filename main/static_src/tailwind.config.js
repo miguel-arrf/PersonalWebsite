@@ -62,7 +62,7 @@ module.exports = {
                 'vivid-yellow':'#E7CE4A',
                 'vivid-pink':'#B6B2FF',
                 'vivid-green':'#00E29A',
-                'vivid-orange':'#ffb2b3',
+                'vivid-orange':'#FFB2B3',
 
                 'apple-yellow':'rgb(255,214,10)',
             },
